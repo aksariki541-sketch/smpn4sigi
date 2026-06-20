@@ -548,13 +548,15 @@ nav {
     transform: scale(1.06);
 }
 
+/* TULISAN GALERI PINDAH KE ATAS */
 .gallery-caption {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 0;
+    bottom: auto;
     padding: 20px;
-    background: linear-gradient(to top, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0));
+    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0));
     color: var(--white);
 }
 
@@ -818,4 +820,4 @@ footer {
     .gallery-caption p {
         font-size: 0.8rem;
     }
-    }
+}
