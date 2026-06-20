@@ -3,18 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMP Negeri 4 Sigi</title>
     
-    <!-- Meta SEO -->
-    <meta name="description" content="Website resmi informasi SMP Negeri 4 Sigi, profil sekolah, MPLS, ekstrakurikuler, galeri, dan kontak.">
-    <meta name="keywords" content="SMP Negeri 4 Sigi, SMP 4 Sigi, SMPN 4 Sigi, sekolah Sigi, SMP Dolo, Kotapulu">
+    <title>SMP Negeri 4 Sigi</title>
+
+    <!-- Meta SEO Utama -->
+    <meta name="description" content="informasi SMP Negeri 4 Sigi, sekolah negeri berakreditasi A di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi.">
+    <meta name="keywords" content="SMP Negeri 4 Sigi, SMPN 4 Sigi, SMP 4 Sigi, SMPN DOLO,">
     <meta name="author" content="SMP Negeri 4 Sigi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="theme-color" content="#1e40af">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smpnegeri4sigi.my.id/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://files.catbox.moe/vebm5n.jpeg" type="image/jpeg">
+
+    <!-- Open Graph / Preview WhatsApp, Facebook, Instagram -->
+    <meta property="og:title" content="SMP Negeri 4 Sigi | Profil, MPLS & Informasi Sekolah">
+    <meta property="og:description" content="Website informasi SMP Negeri 4 Sigi berisi profil sekolah, MPLS, ekstrakurikuler, galeri kegiatan, alamat, dan kontak resmi.">
+    <meta property="og:image" content="https://files.catbox.moe/vebm5n.jpeg">
+    <meta property="og:url" content="https://smpnegeri4sigi.my.id/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="SMP Negeri 4 Sigi">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SMP Negeri 4 Sigi">
+    <meta name="twitter:description" content="Profil, MPLS, ekstrakurikuler, galeri, alamat, dan kontak resmi SMP Negeri 4 Sigi.">
+    <meta name="twitter:image" content="https://files.catbox.moe/vebm5n.jpeg">
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SMP Negeri 4 Sigi",
+      "alternateName": ["SMPN 4 Sigi", "SMP 4 Sigi"],
+      "url": "https://smpnegeri4sigi.my.id/",
+      "logo": "https://files.catbox.moe/vebm5n.jpeg",
+      "image": "https://files.catbox.moe/vebm5n.jpeg",
+      "description": "SMP Negeri 4 Sigi adalah sekolah negeri berakreditasi A yang berlokasi di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.",
+      "foundingDate": "1980-07-30",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "NPSN",
+        "value": "40200659"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Poros Palu-Kulawi KM. 13",
+        "addressLocality": "Kotapulu",
+        "addressRegion": "Sulawesi Tengah",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://www.instagram.com/spen4_sigi/",
+        "https://www.youtube.com/@smpnegeri4sigi798",
+        "https://www.google.com/maps/search/?api=1&query=SMP%20Negeri%204%20Sigi%20Kotapulu%20Dolo%20Sigi"
+      ]
+    }
+    </script>
 
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Sitemap & Robots -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://smpnegeri4sigi.my.id/sitemap.xml">
 
     <style>
         :root {
@@ -48,7 +108,6 @@
             overflow-x: hidden;
         }
 
-        /* --- Global Components --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -132,7 +191,6 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
 
-        /* --- Navbar --- */
         header {
             background: var(--white);
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -235,7 +293,6 @@
             font-size: 1.5rem;
         }
 
-        /* --- Mobile Menu --- */
         @media (max-width: 992px) {
             .nav-links {
                 position: fixed;
@@ -275,7 +332,6 @@
             }
         }
 
-        /* --- Hero Section --- */
         .hero {
             padding: 100px 0;
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -333,9 +389,9 @@
         .hero-btns {
             display: flex;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
-        /* --- Stats Section --- */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -365,7 +421,6 @@
             font-size: 0.9rem;
         }
 
-        /* --- Page Management --- */
         .page {
             display: none;
             animation: fadeIn 0.5s ease;
@@ -380,7 +435,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Home: Info MPLS --- */
         .info-mpls {
             background: var(--soft-gray);
         }
@@ -411,7 +465,6 @@
             .hero h1 { font-size: 2.5rem; }
         }
 
-        /* --- Features Grid --- */
         .grid-4 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -438,7 +491,6 @@
             transform: scale(1.1);
         }
 
-        /* --- Profil Page --- */
         .profile-header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -500,7 +552,6 @@
             margin-top: 5px;
         }
 
-        /* --- MPLS Page --- */
         .timeline {
             position: relative;
             max-width: 800px;
@@ -541,7 +592,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        /* --- Ekstrakurikuler --- */
         .ekstra-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -551,7 +601,6 @@
         @media (max-width: 992px) { .ekstra-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .ekstra-grid { grid-template-columns: 1fr; } }
 
-        /* --- Galeri --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -721,7 +770,6 @@
             .participation-wrap { grid-template-columns: 1fr; }
         }
 
-        /* --- Kontak --- */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -749,7 +797,6 @@
 
         @media (max-width: 850px) { .contact-container { grid-template-columns: 1fr; } }
 
-        /* --- Footer --- */
         footer {
             background: var(--primary-navy);
             color: white;
@@ -778,19 +825,23 @@
 
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; color: #94a3b8; font-size: 0.9rem; }
 
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } .profile-header { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            .footer-grid { grid-template-columns: 1fr; } 
+            .profile-header { grid-template-columns: 1fr; } 
+            .section-title h2 { font-size: 2rem; }
+            .data-table td:first-child { width: 135px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- SVG Sprite: Logo SMP Negeri 4 Sigi -->
     <!-- Header & Navbar -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo-container">
                     <a href="https://files.catbox.moe/vebm5n.jpeg" class="logo-mark" target="_blank" rel="noopener" aria-label="Buka logo SMP Negeri 4 Sigi">
-                        <img src="https://files.catbox.moe/vebm5n.jpeg" alt="Logo SMP Negeri 4 Sigi">
+                        <img src="https://files.catbox.moe/vebm5n.jpeg" alt="Logo resmi SMP Negeri 4 Sigi">
                     </a>
                     <div class="logo-text">
                         <h1>SMP Negeri 4 Sigi</h1>
@@ -1004,10 +1055,10 @@
                             <h4 style="color: var(--primary-blue); margin-bottom: 15px;">Perlengkapan</h4>
                             <ul style="padding-left: 20px; font-size: 0.9rem;">
                                 <li>Seragam sekolah lengkap</li>
-                                <li>Alat tulis & Buku catatan</li>
-                                <li>Botol minum & Bekal</li>
+                                <li>Alat tulis & buku catatan</li>
+                                <li>Botol minum & bekal</li>
                                 <li>Perlengkapan ibadah</li>
-                                <li>Topi/atribut sesuai arahan</li>
+                                <li>Topi atau atribut sesuai arahan</li>
                             </ul>
                         </div>
                     </div>
@@ -1019,35 +1070,35 @@
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>Senin, 13 Juli 2026</h4>
-                                    <p>Pembukaan MPLS, Pengenalan lingkungan sekolah, dan Pengenalan guru.</p>
+                                    <p>Pembukaan MPLS, pengenalan lingkungan sekolah, dan pengenalan guru.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>Selasa, 14 Juli 2026</h4>
-                                    <p>Materi kedisiplinan, Pengenalan tata tertib, dan Pembiasaan budaya sekolah.</p>
+                                    <p>Materi kedisiplinan, pengenalan tata tertib, dan pembiasaan budaya sekolah.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>Rabu, 15 Juli 2026</h4>
-                                    <p>Pengenalan kurikulum, Fasilitas sekolah, dan Materi karakter pelajar.</p>
+                                    <p>Pengenalan kurikulum, fasilitas sekolah, dan materi karakter pelajar.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>Kamis, 16 Juli 2026</h4>
-                                    <p>Pengenalan ekstrakurikuler, Edukasi anti perundungan, dan Kebersamaan.</p>
+                                    <p>Pengenalan ekstrakurikuler, edukasi anti perundungan, dan kebersamaan.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>Jumat, 17 Juli 2026</h4>
-                                    <p>Refleksi kegiatan, Penutupan MPLS, dan Persiapan belajar reguler.</p>
+                                    <p>Refleksi kegiatan, penutupan MPLS, dan persiapan belajar reguler.</p>
                                 </div>
                             </div>
                         </div>
@@ -1062,7 +1113,7 @@
                                 <li>Berpakaian sesuai arahan</li>
                             </ul>
                             <ul style="padding-left: 20px;">
-                                <li>Menjaga kebersihan & Kesopanan</li>
+                                <li>Menjaga kebersihan & kesopanan</li>
                                 <li>Dilarang membawa barang berbahaya</li>
                                 <li>Dilarang melakukan perundungan</li>
                             </ul>
@@ -1327,6 +1378,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Teks tambahan SEO, tidak mengganggu tampilan utama -->
+        <section style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+            <h2>SMP Negeri 4 Sigi Kotapulu Dolo Kabupaten Sigi</h2>
+            <p>SMP Negeri 4 Sigi atau SMPN 4 Sigi adalah sekolah menengah pertama negeri di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah. Website ini memuat informasi profil SMP Negeri 4 Sigi, MPLS SMP Negeri 4 Sigi, ekstrakurikuler SMP Negeri 4 Sigi, galeri kegiatan sekolah, alamat sekolah, dan kontak resmi sekolah.</p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -1362,27 +1419,23 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 SMP Negeri 4 Sigi. All rights reserved.</p>
-                <p style="font-size: 0.7rem; margin-top: 5px;">Crafted by smpn 4 sigi</p>
+                <p style="font-size: 0.7rem; margin-top: 5px;">Crafted by SMP Negeri 4 Sigi</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Navigasi Halaman
         function showPage(pageId, updateHistory = true) {
-            // Sembunyikan semua halaman
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
 
-            // Tampilkan halaman yang dipilih
             const selectedPage = document.getElementById(pageId);
             if (selectedPage) {
                 selectedPage.classList.add('active');
             }
 
-            // Update status menu aktif
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
                 item.classList.remove('active');
@@ -1391,29 +1444,24 @@
                 }
             });
 
-            // Tutup menu mobile jika terbuka
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.remove('active');
 
-            // Scroll ke atas dengan halus
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
 
-            // Update URL tanpa reload
             if (updateHistory) {
                 history.pushState(null, null, '#' + pageId);
             }
         }
 
-        // Hamburger Menu Toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
 
-        // Ruang Partisipasi Siswa (demo statis, tersimpan di browser pengunjung)
         const participationForm = document.getElementById('participationForm');
         const participationList = document.getElementById('participationList');
         const participationKey = 'smpn4sigi_participation_demo';
@@ -1430,9 +1478,23 @@
             localStorage.setItem(participationKey, JSON.stringify(data.slice(0, 5)));
         }
 
+        function escapeHTML(text) {
+            return text.replace(/[&<>"']/g, function(match) {
+                const escapeMap = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                };
+                return escapeMap[match];
+            });
+        }
+
         function renderParticipationList() {
             if (!participationList) return;
             const data = getParticipationData();
+
             if (data.length === 0) {
                 participationList.innerHTML = `
                     <div class="idea-item">
@@ -1446,9 +1508,9 @@
 
             participationList.innerHTML = data.map(item => `
                 <div class="idea-item">
-                    <strong>${item.type}</strong>
-                    <small>${item.name} • ${item.className}</small>
-                    <p style="margin:0; color: var(--text-light);">${item.message}</p>
+                    <strong>${escapeHTML(item.type)}</strong>
+                    <small>${escapeHTML(item.name)} • ${escapeHTML(item.className)}</small>
+                    <p style="margin:0; color: var(--text-light);">${escapeHTML(item.message)}</p>
                 </div>
             `).join('');
         }
@@ -1469,11 +1531,11 @@
                 saveParticipationData(data);
                 renderParticipationList();
                 participationForm.reset();
+
                 alert('Partisipasi berhasil ditampilkan sebagai demo di website. Untuk pengumpulan resmi, silakan hubungi pihak sekolah melalui Instagram @spen4_sigi.');
             });
         }
 
-        // Form Kontak Dummy
         const contactForm = document.getElementById('dummyForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -1483,7 +1545,6 @@
             });
         }
 
-        // Inisialisasi Halaman berdasarkan Hash URL
         window.addEventListener('load', () => {
             const hash = window.location.hash.substring(1);
             if (hash) {
@@ -1491,11 +1552,10 @@
             }
         });
 
-        // Tangani navigasi tombol 'back' browser
         window.addEventListener('popstate', () => {
             const hash = window.location.hash.substring(1) || 'beranda';
             showPage(hash, false);
         });
     </script>
 </body>
-</html>
+    </html>
