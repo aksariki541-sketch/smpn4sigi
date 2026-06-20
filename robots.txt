@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smpnegeri4sigi.my.id/sitemap.xml
