@@ -14,7 +14,6 @@
     <meta name="theme-color" content="#1e40af">
 
     <link rel="canonical" href="https://smpnegeri4sigi.my.id/">
-
     <link rel="preload" as="image" href="smpn4sigi.jpg" fetchpriority="high">
 
     <link rel="icon" href="smpn4sigi.jpg" type="image/jpeg">
@@ -85,17 +84,7 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-    <link rel="preload"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -171,7 +160,10 @@
 
                     <div class="info-card-text">
                         <h3>Informasi MPLS Peserta Didik Baru</h3>
-                        <p>Masa Pengenalan Lingkungan Sekolah (MPLS) SMP 4 SIGI akan dilaksanakan pada tanggal 6–13 Juli 2026. Peserta didik baru diharapkan mempersiapkan perlengkapan yang diperlukan.</p>
+                        <p>
+                            Masa Pengenalan Lingkungan Sekolah (MPLS) SMP 4 SIGI akan dilaksanakan pada tanggal
+                            6–13 Juli 2026. Peserta didik baru diharapkan mempersiapkan perlengkapan yang diperlukan.
+                        </p>
                         <button type="button" class="btn btn-light" onclick="showPage('mpls')">Selengkapnya</button>
                     </div>
                 </div>
@@ -251,7 +243,9 @@
                 <div class="section-padding">
                     <h3>Sejarah Singkat</h3>
                     <p style="margin-top: 15px;">
-                        SMP Negeri 4 Sigi resmi berdiri dan beroperasi sejak 30 Juli 1980. Terletak di Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, sekolah ini telah melayani pendidikan selama puluhan tahun di wilayah tersebut.
+                        SMP Negeri 4 Sigi resmi berdiri dan beroperasi sejak 30 Juli 1980. Terletak di Jalan Poros
+                        Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, sekolah ini telah melayani
+                        pendidikan selama puluhan tahun di wilayah tersebut.
                     </p>
                 </div>
 
@@ -301,7 +295,11 @@
                 </div>
 
                 <div class="card" style="background: var(--soft-gray); border-left: 5px solid var(--primary-blue); margin-bottom: 40px;">
-                    <p>MPLS merupakan kegiatan pengenalan lingkungan sekolah bagi peserta didik baru. Kegiatan ini bertujuan membantu siswa mengenal tata tertib, budaya sekolah, guru, teman, fasilitas, kegiatan pembelajaran, serta program-program yang ada di SMP 4 SIGI.</p>
+                    <p>
+                        MPLS merupakan kegiatan pengenalan lingkungan sekolah bagi peserta didik baru.
+                        Kegiatan ini bertujuan membantu siswa mengenal tata tertib, budaya sekolah, guru,
+                        teman, fasilitas, kegiatan pembelajaran, serta program-program yang ada di SMP 4 SIGI.
+                    </p>
                 </div>
 
                 <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -329,7 +327,6 @@
 
                 <div class="section-padding">
                     <h3 style="text-align: center; margin-bottom: 30px;">Jadwal Kegiatan</h3>
-
                     <div class="timeline">
                         <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Senin, 6 Juli 2026</h4></div></div>
                         <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Selasa, 7 Juli 2026</h4></div></div>
@@ -537,6 +534,8 @@ function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
     const hamburger = document.querySelector(".hamburger");
 
+    if (!navLinks || !hamburger) return;
+
     navLinks.classList.toggle("active");
 
     const isOpen = navLinks.classList.contains("active");
@@ -554,6 +553,7 @@ function showPage(pageId) {
     });
 
     const selectedPage = document.getElementById(pageId);
+
     if (selectedPage) {
         selectedPage.classList.add("active");
     }
@@ -573,16 +573,20 @@ function showPage(pageId) {
         hamburger.setAttribute("aria-expanded", "false");
     }
 
-    history.replaceState(null, "", "#" + pageId);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (location.hash !== "#" + pageId) {
+        history.replaceState(null, "", "#" + pageId);
+    }
+
+    window.scrollTo(0, 0);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const allowedPages = ["beranda", "profil", "mpls", "ekstrakurikuler", "galeri", "kontak"];
     const hashPage = window.location.hash.replace("#", "");
-    const firstPage = allowedPages.includes(hashPage) ? hashPage : "beranda";
 
-    showPage(firstPage);
+    if (allowedPages.includes(hashPage) && hashPage !== "beranda") {
+        showPage(hashPage);
+    }
 
     const form = document.getElementById("dummyForm");
 
@@ -608,4 +612,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 </body>
-                                </html>
+</html>
