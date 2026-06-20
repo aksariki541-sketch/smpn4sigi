@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SMP Negeri 4 Sigi</title>
+
+    <!-- Meta SEO Utama -->
+    <meta name="description" content="informasi SMP Negeri 4 Sigi, sekolah negeri berakreditasi A di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi.">
+    <meta name="keywords" content="SMP Negeri 4 Sigi, SMPN 4 Sigi, SMP 4 Sigi, SMPN DOLO">
+    <meta name="author" content="SMP Negeri 4 Sigi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="theme-color" content="#1e40af">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smpnegeri4sigi.my.id/">
+
+    <!-- Favicon dari GitHub/Vercel -->
+    <link rel="icon" href="smpn4sigi.jpg" type="image/jpeg">
+
+    <!-- Open Graph / Preview WhatsApp, Facebook, Instagram -->
+    <meta property="og:title" content="SMP Negeri 4 Sigi | Profil, MPLS & Informasi Sekolah">
+    <meta property="og:description" content="Website informasi SMP Negeri 4 Sigi berisi profil sekolah, MPLS, ekstrakurikuler, galeri kegiatan, alamat, dan kontak resmi.">
+    <meta property="og:image" content="https://smpnegeri4sigi.my.id/smpn4sigi.jpg">
+    <meta property="og:url" content="https://smpnegeri4sigi.my.id/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="SMP Negeri 4 Sigi">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SMP Negeri 4 Sigi">
+    <meta name="twitter:description" content="Profil, MPLS, ekstrakurikuler, galeri, alamat, dan kontak resmi SMP Negeri 4 Sigi.">
+    <meta name="twitter:image" content="https://smpnegeri4sigi.my.id/smpn4sigi.jpg">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://smpnegeri4sigi.my.id/sitemap.xml">
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SMP Negeri 4 Sigi",
+      "alternateName": ["SMPN 4 Sigi", "SMP 4 Sigi"],
+      "url": "https://smpnegeri4sigi.my.id/",
+      "logo": "https://smpnegeri4sigi.my.id/smpn4sigi.jpg",
+      "image": "https://smpnegeri4sigi.my.id/smpn4sigi.jpg",
+      "description": "SMP Negeri 4 Sigi adalah sekolah negeri berakreditasi A yang berlokasi di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.",
+      "foundingDate": "1980-07-30",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "NPSN",
+        "value": "40200659"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Poros Palu-Kulawi KM. 13",
+        "addressLocality": "Kotapulu",
+        "addressRegion": "Sulawesi Tengah",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://www.instagram.com/spen4_sigi/",
+        "https://www.youtube.com/@smpnegeri4sigi798",
+        "https://www.google.com/maps/search/?api=1&query=SMP%20Negeri%204%20Sigi%20Kotapulu%20Dolo%20Sigi"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS terpisah -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="smpn4sigi.jpg" class="logo-mark" target="_blank" rel="noopener" aria-label="Buka logo SMP Negeri 4 Sigi">
+                        <img src="smpn4sigi.jpg" alt="Logo SMP Negeri 4 Sigi">
+                    </a>
+                    <div class="logo-text">
+                        <h1>SMP Negeri 4 Sigi</h1>
+                        <span>Sekolah Berakreditasi A</span>
+                    </div>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#beranda" class="nav-item active" onclick="showPage('beranda')">Beranda</a></li>
+                    <li><a href="#profil" class="nav-item" onclick="showPage('profil')">Profil</a></li>
+                    <li><a href="#mpls" class="nav-item" onclick="showPage('mpls')">MPLS</a></li>
+                    <li><a href="#ekstrakurikuler" class="nav-item" onclick="showPage('ekstrakurikuler')">Ekstrakurikuler</a></li>
+                    <li><a href="#galeri" class="nav-item" onclick="showPage('galeri')">Galeri</a></li>
+                    <li><a href="#kontak" class="nav-item" onclick="showPage('kontak')">Kontak</a></li>
+                </ul>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- BERANDA PAGE -->
+        <section id="beranda" class="page active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="badge">Selamat Datang</span>
+                        <h1>SMP Negeri 4 Sigi</h1>
+                        <h2>Membangun Generasi Berakhlak, Berprestasi, dan Siap Menghadapi Masa Depan</h2>
+                        <p>SMP Negeri 4 Sigi merupakan sekolah negeri yang berlokasi di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi. Sekolah ini berkomitmen memberikan pendidikan berkualitas melalui pembelajaran yang aktif, disiplin, dan berkarakter.</p>
+                        <div class="hero-btns">
+                            <button class="btn btn-primary" onclick="showPage('profil')">Lihat Profil</button>
+                            <button class="btn btn-outline" onclick="showPage('mpls')">Info MPLS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>A</h3><p>Akreditasi</p></div>
+                    <div class="stat-card"><h3>40200659</h3><p>NPSN</p></div>
+                    <div class="stat-card"><h3>1980</h3><p>Berdiri Sejak</p></div>
+                    <div class="stat-card"><h3>Merdeka</h3><p>Kurikulum</p></div>
+                </div>
+
+                <div class="info-mpls section-padding">
+                    <div class="info-card">
+                        <i class="fas fa-bullhorn fa-4x" style="color: var(--accent-cyan);"></i>
+                        <div class="info-card-text">
+                            <h3>Informasi MPLS Peserta Didik Baru</h3>
+                            <p>Masa Pengenalan Lingkungan Sekolah (MPLS) SMP Negeri 4 Sigi akan dilaksanakan pada tanggal 6–13 Juli 2026. Peserta didik baru diharapkan mempersiapkan perlengkapan yang diperlukan.</p>
+                            <button class="btn btn-outline" style="border-color: white; color: white;" onclick="showPage('mpls')">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-padding">
+                    <div class="section-title">
+                        <h2>Mengapa Memilih Kami?</h2>
+                        <p>Keunggulan SMP Negeri 4 Sigi dalam membentuk karakter siswa.</p>
+                    </div>
+                    <div class="grid-4">
+                        <div class="card"><div class="feature-icon"><i class="fas fa-leaf"></i></div><h4>Lingkungan Nyaman</h4><p>Suasana sekolah yang asri, hijau, dan kondusif untuk proses belajar mengajar.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div><h4>Guru Profesional</h4><p>Didukung oleh tenaga pendidik yang kompeten dan berdedikasi tinggi.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-star"></i></div><h4>Ekstrakurikuler</h4><p>Berbagai pilihan kegiatan untuk mengembangkan minat dan bakat siswa.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-user-shield"></i></div><h4>Pendidikan Karakter</h4><p>Fokus pada pembentukan akhlak mulia dan kedisiplinan siswa.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFIL PAGE -->
+        <section id="profil" class="page">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="section-title"><h2>Profil Sekolah</h2></div>
+
+                    <div class="profile-header">
+                        <div class="profile-img-placeholder">
+                            <a href="smpn4sigi.jpg" class="profile-logo-link" target="_blank" rel="noopener" aria-label="Buka logo SMP Negeri 4 Sigi">
+                                <img src="smpn4sigi.jpg" alt="Logo SMP Negeri 4 Sigi">
+                            </a>
+                        </div>
+
+                        <div>
+                            <p>SMP Negeri 4 Sigi adalah salah satu satuan pendidikan negeri yang berada di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah. Sekolah ini memiliki komitmen dalam memberikan layanan pendidikan yang bermutu, membentuk karakter peserta didik, dan mendukung pengembangan potensi siswa dalam bidang akademik maupun non-akademik.</p>
+
+                            <table class="data-table">
+                                <tr><td>Nama Sekolah</td><td>SMP Negeri 4 Sigi</td></tr>
+                                <tr><td>NPSN</td><td>40200659</td></tr>
+                                <tr><td>Status</td><td>Negeri</td></tr>
+                                <tr><td>Akreditasi</td><td>A</td></tr>
+                                <tr><td>Kurikulum</td><td>Kurikulum Merdeka</td></tr>
+                                <tr><td>Kepala Sekolah</td><td>Mariati</td></tr>
+                                <tr><td>Tanggal Berdiri</td><td>30 Juli 1980</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="section-padding">
+                        <h3>Sejarah Singkat</h3>
+                        <p style="margin-top: 15px;">SMP Negeri 4 Sigi resmi berdiri dan beroperasi sejak 30 Juli 1980. Terletak di Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, sekolah ini telah melayani pendidikan selama puluhan tahun di wilayah tersebut. Sebagai sekolah negeri yang berkomitmen terhadap pendidikan berkualitas, SMP Negeri 4 Sigi terus berupaya menciptakan lingkungan belajar yang nyaman, disiplin, dan mendukung perkembangan peserta didik.</p>
+                    </div>
+
+                    <div class="vision-mission">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <h3>Visi</h3>
+                            <p style="font-style: italic; font-size: 1.2rem; color: var(--primary-blue); margin-top: 10px;">
+                                "Terwujudnya peserta didik yang berakhlak mulia, berprestasi, disiplin, peduli lingkungan, dan mampu bersaing di era global."
+                            </p>
+                        </div>
+
+                        <div class="grid-4" style="grid-template-columns: 1fr;">
+                            <h3>Misi Sekolah</h3>
+                            <ul class="misi-list">
+                                <li><i class="fas fa-check-circle"></i> Menanamkan nilai keimanan, ketakwaan, dan akhlak mulia kepada peserta didik.</li>
+                                <li><i class="fas fa-check-circle"></i> Meningkatkan kualitas pembelajaran yang aktif, kreatif, dan menyenangkan.</li>
+                                <li><i class="fas fa-check-circle"></i> Mengembangkan potensi peserta didik dalam bidang akademik dan non-akademik.</li>
+                                <li><i class="fas fa-check-circle"></i> Membiasakan budaya disiplin, tanggung jawab, dan kepedulian terhadap lingkungan.</li>
+                                <li><i class="fas fa-check-circle"></i> Mendorong penggunaan teknologi dalam proses pembelajaran.</li>
+                                <li><i class="fas fa-check-circle"></i> Membangun kerja sama yang baik antara sekolah, orang tua, dan masyarakat.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section-padding">
+                        <h3 style="text-align: center; margin-bottom: 30px;">Nilai-Nilai Sekolah</h3>
+                        <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+                            <div class="card nilai-card"><i class="fas fa-clock fa-2x"></i><p>Disiplin</p></div>
+                            <div class="card nilai-card"><i class="fas fa-person-praying fa-2x"></i><p>Religius</p></div>
+                            <div class="card nilai-card"><i class="fas fa-hand-holding-heart fa-2x"></i><p>Tanggung Jawab</p></div>
+                            <div class="card nilai-card"><i class="fas fa-users fa-2x"></i><p>Gotong Royong</p></div>
+                            <div class="card nilai-card"><i class="fas fa-trophy fa-2x"></i><p>Prestasi</p></div>
+                            <div class="card nilai-card"><i class="fas fa-seedling fa-2x"></i><p>Peduli Lingkungan</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MPLS PAGE -->
+        <section id="mpls" class="page">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Masa Pengenalan Lingkungan Sekolah (MPLS)</h2>
+                        <p>MPLS SMP Negeri 4 Sigi Tahun Ajaran 2026/2027</p>
+                    </div>
+                    
+                    <div class="card" style="background: var(--soft-gray); border-left: 5px solid var(--primary-blue); margin-bottom: 40px;">
+                        <p>MPLS merupakan kegiatan pengenalan lingkungan sekolah bagi peserta didik baru. Kegiatan ini bertujuan membantu siswa mengenal tata tertib, budaya sekolah, guru, teman, fasilitas, kegiatan pembelajaran, serta program-program yang ada di SMP Negeri 4 Sigi.</p>
+                    </div>
+
+                    <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                        <div class="card">
+                            <h4 style="color: var(--primary-blue); margin-bottom: 15px;">Detail Kegiatan</h4>
+                            <table class="data-table" style="font-size: 0.9rem;">
+                                <tr><td>Tanggal</td><td>6–13 Juli 2026</td></tr>
+                                <tr><td>Tempat</td><td>SMP Negeri 4 Sigi</td></tr>
+                                <tr><td>Status</td><td><span class="badge" style="margin:0;">Persiapan</span></td></tr>
+                                <tr><td>Tahun Ajaran</td><td>2026/2027</td></tr>
+                            </table>
+                        </div>
+
+                        <div class="card">
+                            <h4 style="color: var(--primary-blue); margin-bottom: 15px;">Perlengkapan</h4>
+                            <ul style="padding-left: 20px; font-size: 0.9rem;">
+                                <li>Seragam sekolah lengkap</li>
+                                <li>Alat tulis & Buku catatan</li>
+                                <li>Botol minum & Bekal</li>
+                                <li>Perlengkapan ibadah</li>
+                                <li>Topi/atribut sesuai arahan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section-padding">
+                        <h3 style="text-align: center; margin-bottom: 30px;">Jadwal Kegiatan</h3>
+                        <div class="timeline">
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Senin, 6 Juli 2026</h4></div></div>
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Selasa, 7 Juli 2026</h4></div></div>
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Rabu, 8 Juli 2026</h4></div></div>
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Kamis, 9 Juli 2026</h4></div></div>
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Jumat, 10 Juli 2026</h4></div></div>
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Senin, 13 Juli 2026</h4></div></div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="background: #fff3cd; border: none;">
+                        <h4>Tata Tertib MPLS</h4>
+                        <div class="grid-4" style="grid-template-columns: 1fr 1fr; margin-top: 15px; font-size: 0.9rem;">
+                            <ul style="padding-left: 20px;">
+                                <li>Datang tepat waktu</li>
+                                <li>Mengikuti kegiatan dengan tertib</li>
+                                <li>Berpakaian sesuai arahan</li>
+                            </ul>
+                            <ul style="padding-left: 20px;">
+                                <li>Menjaga kebersihan & Kesopanan</li>
+                                <li>Dilarang membawa barang berbahaya</li>
+                                <li>Dilarang melakukan perundungan</li>
+                            </ul>
+                        </div>
+                        <p style="margin-top: 20px; font-size: 0.85rem; font-style: italic;">* Informasi lanjutan dapat diperoleh melalui pihak sekolah.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EKSTRAKURIKULER PAGE -->
+        <section id="ekstrakurikuler" class="page">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Ekstrakurikuler</h2>
+                        <p>Wadah pengembangan minat, bakat, karakter, dan prestasi peserta didik.</p>
+                    </div>
+
+                    <div class="ekstra-grid">
+                        <div class="card"><div class="feature-icon"><i class="fas fa-campground"></i></div><h4>Pramuka</h4><p>Melatih kedisiplinan, kemandirian, kepemimpinan, dan kerja sama.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-hand-holding-medical"></i></div><h4>PMR</h4><p>Membentuk kepedulian sosial, keterampilan pertolongan pertama, dan jiwa kemanusiaan.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-hand-fist"></i></div><h4>Silat</h4><p>Mengembangkan kemampuan bela diri, ketahanan fisik, dan sportivitas.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-medal"></i></div><h4>Karate</h4><p>Melatih fokus, kekuatan, keberanian, dan pengendalian diri.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-bolt"></i></div><h4>Taekwondo</h4><p>Mengasah kemampuan bela diri, kelincahan, dan disiplin.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-mountain"></i></div><h4>Panjat Tebing</h4><p>Melatih keberanian, strategi, kekuatan, dan konsentrasi.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-futbol"></i></div><h4>Sepak Bola</h4><p>Mengembangkan kerja sama tim, teknik bermain, dan sportivitas.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-users-viewfinder"></i></div><h4>Futsal</h4><p>Melatih kecepatan, kekompakan, teknik, dan strategi permainan.</p></div>
+                        <div class="card"><div class="feature-icon"><i class="fas fa-table-tennis-paddle-ball"></i></div><h4>Bulu Tangkis</h4><p>Mengembangkan refleks, ketangkasan, stamina, dan semangat kompetisi.</p></div>
+                    </div>
+
+                    <div class="card" style="margin-top: 50px; text-align: center; border: none; background: var(--soft-gray);">
+                        <p>"Melalui kegiatan ekstrakurikuler, peserta didik SMP Negeri 4 Sigi dapat mengembangkan potensi diri, membangun karakter, dan meraih prestasi sesuai minat dan bakat masing-masing."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI PAGE -->
+        <section id="galeri" class="page">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Galeri Kegiatan</h2>
+                        <p>Dokumentasi kegiatan SMP Negeri 4 Sigi.</p>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="galeri1.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 1"><div class="gallery-caption"><h4>Kegiatan Sekolah</h4><p>Dokumentasi kegiatan siswa SMP Negeri 4 Sigi.</p></div></div>
+                        <div class="gallery-item"><img src="galeri2.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 2"><div class="gallery-caption"><h4>Kegiatan Siswa</h4><p>Dokumentasi aktivitas siswa di lingkungan sekolah.</p></div></div>
+                        <div class="gallery-item"><img src="galeri3.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 3"><div class="gallery-caption"><h4>Ekstrakurikuler</h4><p>Kegiatan minat dan bakat siswa.</p></div></div>
+                        <div class="gallery-item"><img src="galeri4.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 4"><div class="gallery-caption"><h4>MPLS</h4><p>Dokumentasi Masa Pengenalan Lingkungan Sekolah.</p></div></div>
+                        <div class="gallery-item"><img src="galeri5.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 5"><div class="gallery-caption"><h4>Lingkungan Sekolah</h4><p>Suasana lingkungan SMP Negeri 4 Sigi.</p></div></div>
+                        <div class="gallery-item"><img src="galeri6.jpg" alt="Galeri kegiatan SMP Negeri 4 Sigi 6"><div class="gallery-caption"><h4>Dokumentasi Sekolah</h4><p>Foto kegiatan dan momen sekolah.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK PAGE -->
+        <section id="kontak" class="page">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Kontak Kami</h2>
+                        <p>Hubungi kami untuk informasi lebih lanjut.</p>
+                    </div>
+
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <div class="card" style="margin-bottom: 20px;"><div style="display: flex; gap: 20px; align-items: flex-start;"><i class="fas fa-map-marker-alt" style="color: var(--primary-blue); font-size: 1.5rem;"></i><div><h4>Alamat Sekolah</h4><p style="font-size: 0.9rem;">Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kec. Dolo, Kab. Sigi, Sulawesi Tengah</p></div></div></div>
+
+                            <div class="card" style="margin-bottom: 20px;"><div style="display: flex; gap: 20px; align-items: flex-start;"><i class="fas fa-envelope" style="color: var(--primary-blue); font-size: 1.5rem;"></i><div><h4>Email Sekolah</h4><p style="font-size: 0.9rem;">smpnegeri4sigi@gmail.com</p></div></div></div>
+
+                            <div class="card"><div style="display: flex; gap: 20px; align-items: flex-start;"><i class="fas fa-clock" style="color: var(--accent-green); font-size: 1.5rem;"></i><div><h4>Jam Layanan</h4><p style="font-size: 0.9rem;">Senin–Jumat: 07.00–14.00 WITA<br>Sabtu/Minggu: Libur</p></div></div></div>
+                        </div>
+
+                        <div class="card">
+                            <form class="contact-form" id="dummyForm">
+                                <div class="form-group"><label>Nama Lengkap</label><input type="text" id="contactName" placeholder="Masukkan nama Anda..." required></div>
+                                <div class="form-group"><label>Email</label><input type="email" id="contactEmail" placeholder="Masukkan email Anda..." required></div>
+                                <div class="form-group"><label>Pesan</label><textarea rows="5" id="contactMessage" placeholder="Tuliskan pesan Anda..." required></textarea></div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan ke Gmail</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo"><h2>SMP Negeri 4 Sigi</h2><p>SMP Negeri 4 Sigi berkomitmen menciptakan lingkungan pendidikan yang disiplin, berkarakter, dan berprestasi.</p></div>
+
+                <div class="footer-links">
+                    <h3>Menu Cepat</h3>
+                    <ul>
+                        <li><a href="#beranda" onclick="showPage('beranda')">Beranda</a></li>
+                        <li><a href="#profil" onclick="showPage('profil')">Profil</a></li>
+                        <li><a href="#mpls" onclick="showPage('mpls')">MPLS</a></li>
+                        <li><a href="#ekstrakurikuler" onclick="showPage('ekstrakurikuler')">Ekstrakurikuler</a></li>
+                        <li><a href="#galeri" onclick="showPage('galeri')">Galeri</a></li>
+                        <li><a href="#kontak" onclick="showPage('kontak')">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p style="margin-bottom: 10px; color: #cbd5e1;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>JL. Poros Palu-Kulawi KM. 13, Kotapulu, Sigi</p>
+                    <p style="margin-bottom: 10px; color: #cbd5e1;"><i class="fas fa-envelope" style="margin-right: 10px;"></i>smpnegeri4sigi@gmail.com</p>
+                    <p style="margin-bottom: 10px; color: #cbd5e1;"><i class="fas fa-id-card" style="margin-right: 10px;"></i>NPSN: 40200659</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SMP Negeri 4 Sigi. All rights reserved.</p>
+                <p style="font-size: 0.7rem; margin-top: 5px;">Crafted by smpn 4 sigi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS terpisah -->
+    <script src="script.js"></script>
+</body>
+</html>
