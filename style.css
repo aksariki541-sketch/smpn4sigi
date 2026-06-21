@@ -9,7 +9,6 @@
     --white: #ffffff;
     --soft-gray: #f8fafc;
     --transition: all 0.3s ease;
-    --smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -43,20 +42,15 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition:
-        transform 0.35s var(--smooth),
-        box-shadow 0.35s var(--smooth),
-        background 0.35s ease,
-        color 0.35s ease;
+    transition: var(--transition);
     cursor: pointer;
     border: none;
     font-size: 0.95rem;
     position: relative;
-    overflow: hidden;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary {
@@ -66,8 +60,8 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translate3d(0, -4px, 0) scale(1.02);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
 }
 
 .btn-outline {
@@ -79,7 +73,6 @@ body {
 .btn-outline:hover {
     background: var(--primary-blue);
     color: var(--white);
-    transform: translate3d(0, -4px, 0) scale(1.02);
 }
 
 /* SECTION */
@@ -122,29 +115,25 @@ body {
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition:
-        transform 0.45s var(--smooth),
-        box-shadow 0.45s var(--smooth),
-        opacity 0.45s ease;
+    transition: var(--transition);
     border: 1px solid rgba(0,0,0,0.03);
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    position: relative;
     cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .card:hover {
-    transform: translate3d(0, -8px, 0) scale(1.01);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 /* HEADER */
 header {
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -175,17 +164,12 @@ nav {
     background: var(--white);
     border: 2px solid rgba(30, 64, 175, 0.12);
     box-shadow: 0 4px 12px rgba(30, 64, 175, 0.18);
-    transition:
-        transform 0.35s var(--smooth),
-        box-shadow 0.35s var(--smooth);
-    animation: logoSmoothPop 0.7s var(--smooth) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
+    transition: var(--transition);
 }
 
 .logo-mark:hover {
-    transform: translate3d(0, -3px, 0) scale(1.03);
-    box-shadow: 0 10px 22px rgba(30, 64, 175, 0.28);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(30, 64, 175, 0.28);
 }
 
 .logo-mark img {
@@ -237,22 +221,7 @@ nav {
     color: var(--text-dark);
     font-weight: 500;
     font-size: 0.95rem;
-    transition:
-        color 0.3s ease,
-        transform 0.3s var(--smooth);
-    position: relative;
-}
-
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: var(--primary-blue);
-    border-radius: 10px;
-    transition: width 0.35s var(--smooth);
+    transition: var(--transition);
 }
 
 .nav-links a:hover,
@@ -260,35 +229,21 @@ nav {
     color: var(--primary-blue);
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-/* HAMBURGER BUTTON */
+/* BUTTON KANAN ATAS */
 .hamburger {
     display: none;
-    width: 46px;
-    height: 46px;
-    border-radius: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--white);
     background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
     box-shadow: 0 8px 22px rgba(30, 64, 175, 0.25);
     align-items: center;
     justify-content: center;
-    transition:
-        transform 0.3s var(--smooth),
-        box-shadow 0.3s var(--smooth),
-        background 0.3s ease;
+    transition: var(--transition);
     -webkit-tap-highlight-color: transparent;
-    border: 1px solid rgba(255,255,255,0.35);
-}
-
-.hamburger:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
 }
 
 .hamburger:active {
@@ -322,7 +277,6 @@ nav {
     max-width: 800px;
     position: relative;
     z-index: 2;
-    animation: heroSmoothIn 0.9s var(--smooth) both;
 }
 
 .badge {
@@ -353,7 +307,7 @@ nav {
 .hero p {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 18px;
+    margin-bottom: 35px;
     max-width: 700px;
 }
 
@@ -361,7 +315,6 @@ nav {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 /* STAT */
@@ -380,20 +333,13 @@ nav {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition:
-        transform 0.45s var(--smooth),
-        box-shadow 0.45s var(--smooth),
-        opacity 0.45s ease;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    position: relative;
     cursor: pointer;
-}
-
-.stat-card:hover {
-    transform: translate3d(0, -8px, 0) scale(1.01);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transition: var(--transition);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .stat-card h3 {
@@ -411,11 +357,23 @@ nav {
 /* PAGE */
 .page {
     display: none;
-    animation: pageFade 0.45s ease;
+    animation: fadeIn 0.5s ease;
 }
 
 .page.active {
     display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* INFO MPLS */
@@ -432,20 +390,13 @@ nav {
     align-items: center;
     gap: 40px;
     margin-top: 40px;
-    transition:
-        transform 0.45s var(--smooth),
-        box-shadow 0.45s var(--smooth),
-        opacity 0.45s ease;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    position: relative;
     cursor: pointer;
-}
-
-.info-card:hover {
-    transform: translate3d(0, -8px, 0) scale(1.01);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transition: var(--transition);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .info-card-text h3 {
@@ -477,10 +428,7 @@ nav {
     font-size: 1.5rem;
     color: var(--primary-blue);
     margin-bottom: 20px;
-    transition:
-        transform 0.35s var(--smooth),
-        background 0.35s ease,
-        color 0.35s ease;
+    transition: var(--transition);
 }
 
 .card:hover .feature-icon {
@@ -630,20 +578,12 @@ nav {
     position: relative;
     background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-    transition:
-        transform 0.45s var(--smooth),
-        box-shadow 0.45s var(--smooth),
-        opacity 0.45s ease;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
     cursor: pointer;
-}
-
-.gallery-item:hover {
-    transform: translate3d(0, -8px, 0) scale(1.01);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transition: var(--transition);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .gallery-item img {
@@ -651,14 +591,14 @@ nav {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.65s var(--smooth);
+    transition: var(--transition);
 }
 
 .gallery-item:hover img {
     transform: scale(1.06);
 }
 
-/* TULISAN GALERI DI ATAS */
+/* TULISAN GALERI PINDAH KE ATAS */
 .gallery-caption {
     position: absolute;
     left: 0;
@@ -708,10 +648,7 @@ nav {
     border-radius: 10px;
     background: var(--soft-gray);
     outline: none;
-    transition:
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: var(--transition);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -719,7 +656,6 @@ nav {
 .contact-form textarea:focus {
     border-color: var(--primary-blue);
     background: white;
-    box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.08);
 }
 
 /* FOOTER */
@@ -773,9 +709,7 @@ footer {
 .footer-links ul li a {
     color: #cbd5e1;
     text-decoration: none;
-    transition:
-        color 0.3s ease,
-        padding-left 0.3s ease;
+    transition: var(--transition);
 }
 
 .footer-links ul li a:hover {
@@ -791,56 +725,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ANIMASI SCROLL */
-.reveal {
-    opacity: 0;
-    transform: translate3d(0, 34px, 0) scale(0.98);
-    transition:
-        opacity 0.75s var(--smooth),
-        transform 0.75s var(--smooth);
-    transition-delay: calc(var(--delay, 0) * 55ms);
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
-}
-
-/* KEYFRAMES */
-@keyframes pageFade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes heroSmoothIn {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 28px, 0) scale(0.98);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) scale(1);
-    }
-}
-
-@keyframes logoSmoothPop {
-    from {
-        opacity: 0;
-        transform: scale(0.82);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .nav-links {
@@ -849,13 +733,11 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background: rgba(255, 255, 255, 0.96);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: var(--white);
         flex-direction: column;
         align-items: center;
         padding-top: 50px;
-        transition: left 0.4s var(--smooth);
+        transition: 0.4s;
         z-index: 999;
     }
 
@@ -891,10 +773,6 @@ footer {
         padding: 80px 0;
     }
 
-    .hero-content {
-        animation-duration: 0.65s;
-    }
-
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -926,24 +804,6 @@ footer {
 
     .footer-grid {
         grid-template-columns: 1fr;
-    }
-
-    .reveal {
-        transform: translate3d(0, 22px, 0) scale(0.99);
-        transition-duration: 0.55s;
-        transition-delay: calc(var(--delay, 0) * 35ms);
-    }
-
-    .card:hover,
-    .stat-card:hover,
-    .gallery-item:hover,
-    .info-card:hover {
-        transform: none;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .gallery-item:hover img {
-        transform: none;
     }
 }
 
@@ -979,13 +839,6 @@ footer {
         font-size: 0.68rem;
     }
 
-    .hamburger {
-        width: 42px;
-        height: 42px;
-        border-radius: 14px;
-        font-size: 1.05rem;
-    }
-
     .hero h1 {
         font-size: 2.1rem;
     }
@@ -1019,50 +872,53 @@ footer {
     }
 }
 
-/* FIX FINAL: PRESS EFFECT DESKTOP + MOBILE */
-.press-pop,
-.card.press-pop,
-.stat-card.press-pop,
-.gallery-item.press-pop,
-.info-card.press-pop,
-.btn.press-pop {
-    position: relative;
-    transform: translate3d(0, -10px, 0) scale(1.045) !important;
-    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.25) !important;
-    z-index: 50 !important;
+/* FIX FINAL: CARD MAJU SAAT DIPENCET DI DESKTOP + MOBILE */
+.card:active,
+.stat-card:active,
+.gallery-item:active,
+.info-card:active,
+.btn:active {
+    transform: translate3d(0, -10px, 0) scale(1.04) !important;
+    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.28) !important;
+    z-index: 999 !important;
 }
 
-.gallery-item.press-pop img {
+.tap-pop,
+.card.tap-pop,
+.stat-card.tap-pop,
+.gallery-item.tap-pop,
+.info-card.tap-pop,
+.btn.tap-pop {
+    transform: translate3d(0, -10px, 0) scale(1.04) !important;
+    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.28) !important;
+    z-index: 999 !important;
+}
+
+.gallery-item:active img,
+.gallery-item.tap-pop img {
     transform: scale(1.06) !important;
 }
 
+/* KHUSUS HP */
 @media (max-width: 768px) {
-    .press-pop,
-    .card.press-pop,
-    .stat-card.press-pop,
-    .gallery-item.press-pop,
-    .info-card.press-pop,
-    .btn.press-pop {
-        transform: translate3d(0, -7px, 0) scale(1.035) !important;
-        box-shadow: 0 18px 45px rgba(30, 64, 175, 0.25) !important;
-        z-index: 50 !important;
+    .card:active,
+    .stat-card:active,
+    .gallery-item:active,
+    .info-card:active,
+    .btn:active,
+    .tap-pop,
+    .card.tap-pop,
+    .stat-card.tap-pop,
+    .gallery-item.tap-pop,
+    .info-card.tap-pop,
+    .btn.tap-pop {
+        transform: translate3d(0, -8px, 0) scale(1.035) !important;
+        box-shadow: 0 20px 50px rgba(30, 64, 175, 0.28) !important;
+        z-index: 999 !important;
     }
 
-    .gallery-item.press-pop img {
-        transform: scale(1.04) !important;
-    }
-}
-
-/* MATIKAN ANIMASI KALAU HP/USER MEMINTA */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
-    }
-
-    .reveal {
-        opacity: 1 !important;
-        transform: none !important;
+    .gallery-item:active img,
+    .gallery-item.tap-pop img {
+        transform: scale(1.045) !important;
     }
 }
