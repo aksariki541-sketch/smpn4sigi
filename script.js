@@ -36,7 +36,9 @@ function showPage(pageId, updateHistory = true) {
         history.pushState(null, null, '#' + pageId);
     }
 
-    refreshRevealAnimation();
+    setTimeout(function () {
+        setupRevealAnimation();
+    }, 120);
 }
 
 function toggleMenu() {
@@ -78,16 +80,53 @@ function setupContactForm() {
     });
 }
 
-/* ANIMASI SCROLL RINGAN */
+/* EFEK ITEM YANG DIPENCET MAJU KE DEPAN */
+function setupPressAnimation() {
+    const pressItems = document.querySelectorAll(
+        '.btn, .card, .stat-card, .gallery-item, .info-card'
+    );
+
+    pressItems.forEach(function (item) {
+        item.addEventListener('pointerdown', function () {
+            item.classList.add('press-pop');
+        });
+
+        item.addEventListener('pointerup', function () {
+            setTimeout(function () {
+                item.classList.remove('press-pop');
+            }, 180);
+        });
+
+        item.addEventListener('pointerleave', function () {
+            item.classList.remove('press-pop');
+        });
+
+        item.addEventListener('pointercancel', function () {
+            item.classList.remove('press-pop');
+        });
+    });
+}
+
+/* ANIMASI MUNCUL SAAT DI-SCROLL */
 let revealObserver = null;
 
 function setupRevealAnimation() {
-    const revealItems = document.querySelectorAll(
+    if (revealObserver) {
+        revealObserver.disconnect();
+    }
+
+    const activePage = document.querySelector('.page.active');
+
+    if (!activePage) return;
+
+    const revealItems = activePage.querySelectorAll(
         '.section-title, .card, .stat-card, .gallery-item, .timeline-item, .info-card'
     );
 
-    revealItems.forEach(function (item) {
+    revealItems.forEach(function (item, index) {
+        item.classList.remove('show');
         item.classList.add('reveal');
+        item.style.setProperty('--delay', index % 4);
     });
 
     if (!('IntersectionObserver' in window)) {
@@ -105,8 +144,8 @@ function setupRevealAnimation() {
             }
         });
     }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -20px 0px'
+        threshold: 0.16,
+        rootMargin: '0px 0px -35px 0px'
     });
 
     revealItems.forEach(function (item) {
@@ -114,37 +153,16 @@ function setupRevealAnimation() {
     });
 }
 
-function refreshRevealAnimation() {
-    setTimeout(function () {
-        const activePage = document.querySelector('.page.active');
-        if (!activePage) return;
-
-        const activeRevealItems = activePage.querySelectorAll('.reveal');
-
-        activeRevealItems.forEach(function (item) {
-            const rect = item.getBoundingClientRect();
-
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                item.classList.add('show');
-
-                if (revealObserver) {
-                    revealObserver.unobserve(item);
-                }
-            }
-        });
-    }, 80);
-}
-
 window.addEventListener('load', function () {
     setupContactForm();
-    setupRevealAnimation();
+    setupPressAnimation();
 
     const hash = window.location.hash.substring(1);
 
     if (hash) {
         showPage(hash, false);
     } else {
-        refreshRevealAnimation();
+        setupRevealAnimation();
     }
 });
 
