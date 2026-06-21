@@ -42,7 +42,11 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition: var(--transition);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.3s ease,
+        color 0.3s ease;
     cursor: pointer;
     border: none;
     font-size: 0.95rem;
@@ -115,7 +119,10 @@ body {
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: var(--transition);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        opacity 0.45s ease;
     border: 1px solid rgba(0,0,0,0.03);
     position: relative;
     cursor: pointer;
@@ -335,7 +342,10 @@ nav {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     position: relative;
     cursor: pointer;
-    transition: var(--transition);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        opacity 0.45s ease;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -392,7 +402,10 @@ nav {
     margin-top: 40px;
     position: relative;
     cursor: pointer;
-    transition: var(--transition);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        opacity 0.45s ease;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -579,7 +592,10 @@ nav {
     background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     box-shadow: 0 12px 28px rgba(0,0,0,0.08);
     cursor: pointer;
-    transition: var(--transition);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        opacity 0.45s ease;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
@@ -591,7 +607,7 @@ nav {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: var(--transition);
+    transition: transform 0.45s ease;
 }
 
 .gallery-item:hover img {
