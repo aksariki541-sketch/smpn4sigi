@@ -1,15 +1,14 @@
 function showPage(pageId, updateHistory = true) {
     const pages = document.querySelectorAll('.page');
+    const selectedPage = document.getElementById(pageId);
+
+    if (!selectedPage) return;
 
     pages.forEach(function (page) {
         page.classList.remove('active');
     });
 
-    const selectedPage = document.getElementById(pageId);
-
-    if (selectedPage) {
-        selectedPage.classList.add('active');
-    }
+    selectedPage.classList.add('active');
 
     const navItems = document.querySelectorAll('.nav-item');
 
@@ -32,8 +31,8 @@ function showPage(pageId, updateHistory = true) {
         behavior: 'smooth'
     });
 
-    if (updateHistory) {
-        history.pushState(null, null, '#' + pageId);
+    if (updateHistory && window.location.hash !== '#' + pageId) {
+        history.pushState(null, '', '#' + pageId);
     }
 }
 
@@ -43,6 +42,26 @@ function toggleMenu() {
     if (navLinks) {
         navLinks.classList.toggle('active');
     }
+}
+
+function setupNavigation() {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+
+            if (!href || href === '#') return;
+
+            const pageId = href.replace('#', '');
+            const targetPage = document.getElementById(pageId);
+
+            if (targetPage && targetPage.classList.contains('page')) {
+                e.preventDefault();
+                showPage(pageId, true);
+            }
+        });
+    });
 }
 
 function setupContactForm() {
@@ -76,9 +95,10 @@ function setupContactForm() {
     });
 }
 
-/* FIX: EFEK TAP/KLIK JALAN DI HP DAN DESKTOP, TIDAK LANGSUNG BALIK */
+/* EFEK TAP FIX: TIDAK DOBEL DI HP */
 function setupTapEffect() {
     const selector = '.btn, .card, .stat-card, .gallery-item, .info-card';
+    let activeTimer = null;
 
     function getItem(target) {
         if (!target) return null;
@@ -88,42 +108,50 @@ function setupTapEffect() {
     function pop(item) {
         if (!item) return;
 
+        clearTimeout(activeTimer);
+
         item.classList.remove('tap-pop');
 
-        requestAnimationFrame(function () {
-            item.classList.add('tap-pop');
+        /*
+            Ini supaya animasi bisa diulang terus
+            tanpa langsung mental balik.
+        */
+        void item.offsetWidth;
 
-            setTimeout(function () {
-                item.classList.remove('tap-pop');
-            }, 1600);
-        });
+        item.classList.add('tap-pop');
+
+        activeTimer = setTimeout(function () {
+            item.classList.remove('tap-pop');
+        }, 520);
     }
 
-    document.addEventListener('touchstart', function (e) {
-        pop(getItem(e.target));
-    }, { passive: true });
-
     document.addEventListener('pointerdown', function (e) {
-        pop(getItem(e.target));
-    }, { passive: true });
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
 
-    document.addEventListener('click', function (e) {
-        pop(getItem(e.target));
-    });
+        const item = getItem(e.target);
+        pop(item);
+    }, { passive: true });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    setupNavigation();
     setupContactForm();
     setupTapEffect();
 
     const hash = window.location.hash.substring(1);
+    const defaultPage = document.getElementById('beranda') ? 'beranda' : null;
 
-    if (hash) {
+    if (hash && document.getElementById(hash)) {
         showPage(hash, false);
+    } else if (defaultPage) {
+        showPage(defaultPage, false);
     }
 });
 
 window.addEventListener('popstate', function () {
     const hash = window.location.hash.substring(1) || 'beranda';
-    showPage(hash, false);
+
+    if (document.getElementById(hash)) {
+        showPage(hash, false);
+    }
 });
