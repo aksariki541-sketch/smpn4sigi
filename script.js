@@ -1,157 +1,104 @@
-function showPage(pageId, updateHistory = true) {
-    const pages = document.querySelectorAll('.page');
-    const selectedPage = document.getElementById(pageId);
+const pages = [...document.querySelectorAll('.page')];
+    const pageButtons = [...document.querySelectorAll('[data-page]')];
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    const siteHeader = document.getElementById('siteHeader');
+    const backTop = document.getElementById('backTop');
+    const liveClock = document.getElementById('liveClock');
 
-    if (!selectedPage) return;
+    function fallbackImage(img, text) {
+      const safeText = String(text || 'SMP 4 SIGI').replace(/</g, '').replace(/>/g, '');
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#dbeafe'/><stop offset='1' stop-color='#ecfeff'/></linearGradient></defs><rect width='900' height='600' fill='url(#g)'/><circle cx='735' cy='90' r='160' fill='#3b82f6' opacity='.15'/><circle cx='170' cy='520' r='210' fill='#06b6d4' opacity='.16'/><rect x='110' y='150' width='680' height='300' rx='42' fill='white' opacity='.72'/><text x='450' y='290' text-anchor='middle' font-size='52' font-family='Arial, sans-serif' font-weight='800' fill='#1e40af'>${safeText}</text><text x='450' y='345' text-anchor='middle' font-size='24' font-family='Arial, sans-serif' font-weight='700' fill='#475569'>Gambar belum tersedia</text></svg>`;
+      img.onerror = null;
+      img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
 
-    pages.forEach(function (page) {
-        page.classList.remove('active');
+    function setActivePage(pageId, pushHash = true) {
+      const target = document.getElementById(pageId) || document.getElementById('beranda');
+      pages.forEach(page => page.classList.toggle('is-active', page === target));
+      pageButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.page === target.id));
+      if (pushHash) history.replaceState(null, '', '#' + target.id);
+      document.title = `${target.dataset.title || 'Beranda'} | SMP 4 SIGI`;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (mobileMenu) mobileMenu.classList.remove('show');
+      refreshReveal();
+    }
+
+    pageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.page;
+        if (id) setActivePage(id);
+      });
     });
 
-    selectedPage.classList.add('active');
-
-    const navItems = document.querySelectorAll('.nav-item');
-
-    navItems.forEach(function (item) {
-        item.classList.remove('active');
-
-        if (item.getAttribute('href') === '#' + pageId) {
-            item.classList.add('active');
-        }
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('show'));
+    document.addEventListener('click', (event) => {
+      if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) mobileMenu.classList.remove('show');
     });
 
-    const navLinks = document.getElementById('navLinks');
+    function updateHeaderState() {
+      siteHeader.classList.toggle('is-scrolled', window.scrollY > 20);
+      backTop.classList.toggle('show', window.scrollY > 360);
+    }
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateHeaderState();
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    if (navLinks) {
-        navLinks.classList.remove('active');
+    function tickClock() {
+      const formatter = new Intl.DateTimeFormat('id-ID', {
+        timeZone: 'Asia/Makassar', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      if (liveClock) liveClock.textContent = formatter.format(new Date()).replace(/\./g, ':') + ' WITA';
+    }
+    tickClock();
+    setInterval(tickClock, 1000);
+    document.getElementById('yearNow').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function refreshReveal() {
+      document.querySelectorAll('.page.is-active .reveal').forEach((el, index) => {
+        el.classList.remove('is-visible');
+        setTimeout(() => el.classList.add('is-visible'), 60 + index * 45);
+      });
     }
 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subjek = document.getElementById('subjek').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      const body = encodeURIComponent(`Nama: ${nama}\nEmail: ${email}\n\n${pesan}`);
+      const subject = encodeURIComponent(subjek || 'Pesan dari website SMP 4 SIGI');
+      window.location.href = `mailto:smpn4sigi@gmail.com?subject=${subject}&body=${body}`;
     });
 
-    if (updateHistory && window.location.hash !== '#' + pageId) {
-        history.pushState(null, '', '#' + pageId);
-    }
-}
-
-function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-
-    if (navLinks) {
-        navLinks.classList.toggle('active');
-    }
-}
-
-function setupNavigation() {
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            const href = link.getAttribute('href');
-
-            if (!href || href === '#') return;
-
-            const pageId = href.replace('#', '');
-            const targetPage = document.getElementById(pageId);
-
-            if (targetPage && targetPage.classList.contains('page')) {
-                e.preventDefault();
-                showPage(pageId, true);
-            }
-        });
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.getElementById('modalClose');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const image = item.querySelector('img');
+        modalImage.src = image.src;
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+      });
     });
-}
-
-function setupContactForm() {
-    const contactForm = document.getElementById('dummyForm');
-
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const nama = document.getElementById('contactName').value.trim();
-        const email = document.getElementById('contactEmail').value.trim();
-        const pesan = document.getElementById('contactMessage').value.trim();
-
-        const tujuan = 'smpnegeri4sigi@gmail.com';
-        const subjek = 'Pesan dari Website SMP Negeri 4 Sigi';
-
-        const isiPesan =
-            `Nama: ${nama}\n` +
-            `Email Pengirim: ${email}\n\n` +
-            `Pesan:\n${pesan}`;
-
-        const gmailUrl =
-            `https://mail.google.com/mail/?view=cm&fs=1` +
-            `&to=${encodeURIComponent(tujuan)}` +
-            `&su=${encodeURIComponent(subjek)}` +
-            `&body=${encodeURIComponent(isiPesan)}`;
-
-        window.open(gmailUrl, '_blank');
-        contactForm.reset();
-    });
-}
-
-/* EFEK TAP FIX: TIDAK DOBEL DI HP */
-function setupTapEffect() {
-    const selector = '.btn, .card, .stat-card, .gallery-item, .info-card';
-    let activeTimer = null;
-
-    function getItem(target) {
-        if (!target) return null;
-        return target.closest(selector);
+    function closeModal() {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      modalImage.src = '';
     }
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+    window.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
 
-    function pop(item) {
-        if (!item) return;
-
-        clearTimeout(activeTimer);
-
-        item.classList.remove('tap-pop');
-
-        /*
-            Ini supaya animasi bisa diulang terus
-            tanpa langsung mental balik.
-        */
-        void item.offsetWidth;
-
-        item.classList.add('tap-pop');
-
-        activeTimer = setTimeout(function () {
-            item.classList.remove('tap-pop');
-        }, 520);
-    }
-
-    document.addEventListener('pointerdown', function (e) {
-        if (e.pointerType === 'mouse' && e.button !== 0) return;
-
-        const item = getItem(e.target);
-        pop(item);
-    }, { passive: true });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    setupNavigation();
-    setupContactForm();
-    setupTapEffect();
-
-    const hash = window.location.hash.substring(1);
-    const defaultPage = document.getElementById('beranda') ? 'beranda' : null;
-
-    if (hash && document.getElementById(hash)) {
-        showPage(hash, false);
-    } else if (defaultPage) {
-        showPage(defaultPage, false);
-    }
-});
-
-window.addEventListener('popstate', function () {
-    const hash = window.location.hash.substring(1) || 'beranda';
-
-    if (document.getElementById(hash)) {
-        showPage(hash, false);
-    }
-});
+    const initialHash = (location.hash || '#beranda').replace('#', '');
+    setActivePage(initialHash, false);
