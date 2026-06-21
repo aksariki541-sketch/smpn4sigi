@@ -38,6 +38,7 @@ function showPage(pageId, updateHistory = true) {
 
     setTimeout(function () {
         setupRevealAnimation();
+        setupPressAnimation();
     }, 120);
 }
 
@@ -80,30 +81,38 @@ function setupContactForm() {
     });
 }
 
-/* EFEK ITEM YANG DIPENCET MAJU KE DEPAN */
+/* EFEK ITEM DIPENCET MAJU KE DEPAN: DESKTOP + MOBILE */
 function setupPressAnimation() {
     const pressItems = document.querySelectorAll(
         '.btn, .card, .stat-card, .gallery-item, .info-card'
     );
 
     pressItems.forEach(function (item) {
-        item.addEventListener('pointerdown', function () {
-            item.classList.add('press-pop');
-        });
+        if (item.dataset.pressReady === 'true') return;
+        item.dataset.pressReady = 'true';
 
-        item.addEventListener('pointerup', function () {
+        function addPress() {
+            item.classList.add('press-pop');
+        }
+
+        function removePress() {
             setTimeout(function () {
                 item.classList.remove('press-pop');
             }, 180);
-        });
+        }
 
-        item.addEventListener('pointerleave', function () {
-            item.classList.remove('press-pop');
-        });
+        item.addEventListener('pointerdown', addPress);
+        item.addEventListener('pointerup', removePress);
+        item.addEventListener('pointerleave', removePress);
+        item.addEventListener('pointercancel', removePress);
 
-        item.addEventListener('pointercancel', function () {
-            item.classList.remove('press-pop');
-        });
+        item.addEventListener('mousedown', addPress);
+        item.addEventListener('mouseup', removePress);
+        item.addEventListener('mouseleave', removePress);
+
+        item.addEventListener('touchstart', addPress, { passive: true });
+        item.addEventListener('touchend', removePress);
+        item.addEventListener('touchcancel', removePress);
     });
 }
 
