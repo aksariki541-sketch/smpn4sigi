@@ -56,6 +56,7 @@ body {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .btn-primary {
@@ -129,6 +130,7 @@ body {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     cursor: pointer;
 }
 
@@ -385,6 +387,7 @@ nav {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     cursor: pointer;
 }
 
@@ -436,6 +439,7 @@ nav {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     cursor: pointer;
 }
 
@@ -633,6 +637,7 @@ nav {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     cursor: pointer;
 }
 
@@ -801,18 +806,6 @@ footer {
     transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* EFEK SAAT DIPENCET: DESKTOP + MOBILE */
-.press-pop,
-.card.press-pop,
-.stat-card.press-pop,
-.gallery-item.press-pop,
-.info-card.press-pop,
-.btn.press-pop {
-    transform: translate3d(0, -10px, 0) scale(1.045) !important;
-    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.24) !important;
-    z-index: 20;
-}
-
 /* KEYFRAMES */
 @keyframes pageFade {
     from {
@@ -952,17 +945,6 @@ footer {
     .gallery-item:hover img {
         transform: none;
     }
-
-    .press-pop,
-    .card.press-pop,
-    .stat-card.press-pop,
-    .gallery-item.press-pop,
-    .info-card.press-pop,
-    .btn.press-pop {
-        transform: translate3d(0, -8px, 0) scale(1.035) !important;
-        box-shadow: 0 20px 50px rgba(30, 64, 175, 0.24) !important;
-        z-index: 20;
-    }
 }
 
 @media (max-width: 600px) {
@@ -1034,6 +1016,40 @@ footer {
 
     .gallery-caption p {
         font-size: 0.8rem;
+    }
+}
+
+/* FIX FINAL: PRESS EFFECT DESKTOP + MOBILE */
+.press-pop,
+.card.press-pop,
+.stat-card.press-pop,
+.gallery-item.press-pop,
+.info-card.press-pop,
+.btn.press-pop {
+    position: relative;
+    transform: translate3d(0, -10px, 0) scale(1.045) !important;
+    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.25) !important;
+    z-index: 50 !important;
+}
+
+.gallery-item.press-pop img {
+    transform: scale(1.06) !important;
+}
+
+@media (max-width: 768px) {
+    .press-pop,
+    .card.press-pop,
+    .stat-card.press-pop,
+    .gallery-item.press-pop,
+    .info-card.press-pop,
+    .btn.press-pop {
+        transform: translate3d(0, -7px, 0) scale(1.035) !important;
+        box-shadow: 0 18px 45px rgba(30, 64, 175, 0.25) !important;
+        z-index: 50 !important;
+    }
+
+    .gallery-item.press-pop img {
+        transform: scale(1.04) !important;
     }
 }
 
