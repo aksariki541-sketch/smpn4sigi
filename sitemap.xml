@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
   <url>
     <loc>https://smpnegeri4sigi.my.id/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/smpn4sigi.WebP</image:loc>
+      <image:title>Logo SMP 4 SIGI</image:title>
+      <image:caption>Logo resmi SMP Negeri 4 Sigi</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri1.jpg</image:loc>
+      <image:title>SMPN 4 Sigi Sapu Bersih 9 Juara</image:title>
+      <image:caption>SMPN 4 Sigi harumkan nama sekolah di ajang lomba.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri2.jpg</image:loc>
+      <image:title>PTP Pramuka SMP 4 SIGI</image:title>
+      <image:caption>Penerimaan Tamu Penggalang SMP 4 SIGI.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri3.jpg</image:loc>
+      <image:title>Pelantikan OSIS SMP 4 SIGI</image:title>
+      <image:caption>Pelantikan OSIS SMP Negeri 4 Sigi.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri4.jpg</image:loc>
+      <image:title>Perpisahan Kelas 9 SMP 4 SIGI</image:title>
+      <image:caption>Dokumentasi acara perpisahan kelas 9 SMP 4 SIGI.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri5.jpg</image:loc>
+      <image:title>Lingkungan SMP 4 SIGI</image:title>
+      <image:caption>Lingkungan sekolah SMP Negeri 4 Sigi.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri6.jpg</image:loc>
+      <image:title>Dokumentasi SMP 4 SIGI</image:title>
+      <image:caption>Dokumentasi kegiatan SMP Negeri 4 Sigi.</image:caption>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://smpnegeri4sigi.my.id/smpn-4-sigi-sapu-bersih-9-juara.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri1.jpg</image:loc>
+      <image:title>SMPN 4 Sigi Sapu Bersih 9 Juara, Harumkan Nama Sekolah di Lomba</image:title>
+      <image:caption>SMPN 4 Sigi berhasil menyapu bersih 9 juara dan mengharumkan nama sekolah dalam kegiatan lomba.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri2.jpg</image:loc>
+      <image:title>Siswa SMPN 4 Sigi Mengikuti Kegiatan Lomba</image:title>
+      <image:caption>Siswa SMPN 4 Sigi mengikuti kegiatan dengan semangat dan percaya diri.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://smpnegeri4sigi.my.id/galeri3.jpg</image:loc>
+      <image:title>Prestasi SMPN 4 Sigi dalam Ajang Lomba</image:title>
+      <image:caption>Prestasi ini menjadi kebanggaan bagi keluarga besar SMP 4 SIGI.</image:caption>
+    </image:image>
+
+    <video:video>
+      <video:thumbnail_loc>https://smpnegeri4sigi.my.id/galeri4.jpg</video:thumbnail_loc>
+      <video:title>Video Dokumentasi SMPN 4 Sigi Sapu Bersih 9 Juara</video:title>
+      <video:description>Video dokumentasi prestasi SMPN 4 Sigi dalam kegiatan lomba.</video:description>
+      <video:content_loc>https://smpnegeri4sigi.my.id/galeri4.mp4</video:content_loc>
+      <video:publication_date>2026-06-21T08:00:00+08:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
 </urlset>
