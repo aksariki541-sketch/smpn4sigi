@@ -35,10 +35,6 @@ function showPage(pageId, updateHistory = true) {
     if (updateHistory) {
         history.pushState(null, null, '#' + pageId);
     }
-
-    setTimeout(function () {
-        setupRevealAnimation();
-    }, 120);
 }
 
 function toggleMenu() {
@@ -80,128 +76,50 @@ function setupContactForm() {
     });
 }
 
-/* FIX FINAL: EFEK DIPENCET JALAN DI DESKTOP + MOBILE */
-function setupPressAnimation() {
-    if (window.__pressAnimationReady) return;
-    window.__pressAnimationReady = true;
-
+/* FIX: EFEK TAP/KLIK JALAN DI HP DAN DESKTOP */
+function setupTapEffect() {
     const selector = '.btn, .card, .stat-card, .gallery-item, .info-card';
 
-    function getPressItem(target) {
+    function getItem(target) {
         if (!target) return null;
         return target.closest(selector);
     }
 
-    function addPress(item) {
-        if (!item) return;
-        item.classList.add('press-pop');
-    }
-
-    function removePress(item) {
+    function pop(item) {
         if (!item) return;
 
-        setTimeout(function () {
-            item.classList.remove('press-pop');
-        }, 280);
+        item.classList.remove('tap-pop');
+
+        requestAnimationFrame(function () {
+            item.classList.add('tap-pop');
+
+            setTimeout(function () {
+                item.classList.remove('tap-pop');
+            }, 650);
+        });
     }
-
-    document.addEventListener('pointerdown', function (e) {
-        const item = getPressItem(e.target);
-        addPress(item);
-    }, { passive: true });
-
-    document.addEventListener('pointerup', function (e) {
-        const item = getPressItem(e.target);
-        removePress(item);
-    });
-
-    document.addEventListener('pointercancel', function (e) {
-        const item = getPressItem(e.target);
-        removePress(item);
-    });
 
     document.addEventListener('touchstart', function (e) {
-        const item = getPressItem(e.target);
-        addPress(item);
+        pop(getItem(e.target));
     }, { passive: true });
 
-    document.addEventListener('touchend', function (e) {
-        const item = getPressItem(e.target);
-        removePress(item);
-    });
+    document.addEventListener('pointerdown', function (e) {
+        pop(getItem(e.target));
+    }, { passive: true });
 
-    document.addEventListener('touchcancel', function (e) {
-        const item = getPressItem(e.target);
-        removePress(item);
-    });
-
-    document.addEventListener('mousedown', function (e) {
-        const item = getPressItem(e.target);
-        addPress(item);
-    });
-
-    document.addEventListener('mouseup', function (e) {
-        const item = getPressItem(e.target);
-        removePress(item);
+    document.addEventListener('click', function (e) {
+        pop(getItem(e.target));
     });
 }
 
-/* ANIMASI MUNCUL SAAT DI-SCROLL */
-let revealObserver = null;
-
-function setupRevealAnimation() {
-    if (revealObserver) {
-        revealObserver.disconnect();
-    }
-
-    const activePage = document.querySelector('.page.active');
-
-    if (!activePage) return;
-
-    const revealItems = activePage.querySelectorAll(
-        '.section-title, .card, .stat-card, .gallery-item, .timeline-item, .info-card'
-    );
-
-    revealItems.forEach(function (item, index) {
-        item.classList.remove('show');
-        item.classList.add('reveal');
-        item.style.setProperty('--delay', index % 4);
-    });
-
-    if (!('IntersectionObserver' in window)) {
-        revealItems.forEach(function (item) {
-            item.classList.add('show');
-        });
-        return;
-    }
-
-    revealObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.16,
-        rootMargin: '0px 0px -35px 0px'
-    });
-
-    revealItems.forEach(function (item) {
-        revealObserver.observe(item);
-    });
-}
-
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     setupContactForm();
-    setupPressAnimation();
+    setupTapEffect();
 
     const hash = window.location.hash.substring(1);
 
     if (hash) {
         showPage(hash, false);
-    } else {
-        setupRevealAnimation();
     }
 });
 
