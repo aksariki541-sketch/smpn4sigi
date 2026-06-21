@@ -175,7 +175,7 @@
 <div class="section-title reveal">
 <span class="eyebrow"><i class="fa-solid fa-layer-group"></i> Menu Utama</span>
 <h2>Pilih halaman yang ingin dibuka</h2>
-<p></p>
+<p>Semua bagian sudah dipisah seperti halaman tersendiri, tetapi tetap berada dalam satu file HTML agar mudah diunggah ke hosting.</p>
 </div>
 <div class="quick-pages">
 <button class="card quick-card reveal" data-page="profil" type="button"><div class="icon-box"><i class="fa-solid fa-school"></i></div><h3>Profil Sekolah</h3><p>Identitas, sejarah, visi, misi, dan data sekolah.</p></button>
@@ -444,7 +444,13 @@
 <div class="gallery-item reveal" data-full="galeri1.jpg"><img alt="Temu PMR 2025 SMP 4 SIGI" onerror="fallbackImage(this, 'Temu PMR 2025')" src="galeri1.jpg"/><div class="gallery-caption"><h3>Temu PMR 2025</h3><p>PMR SMP 4 SIGI meraih Juara 1 pada Temu PMR se-Kabupaten Sigi Tahun 2025.</p></div></div>
 <div class="gallery-item reveal" data-full="galeri2.jpg"><img alt="PTP Pramuka SMP 4 SIGI" onerror="fallbackImage(this, 'PTP Pramuka')" src="galeri2.jpg"/><div class="gallery-caption"><h3>PTP Pramuka</h3><p>Penerimaan Tamu Penggalang untuk menyambut anggota baru.</p></div></div>
 <div class="gallery-item reveal" data-full="galeri3.jpg"><img alt="Pelantikan OSIS SMP 4 SIGI" onerror="fallbackImage(this, 'Pelantikan OSIS')" src="galeri3.jpg"/><div class="gallery-caption"><h3>Pelantikan OSIS</h3><p>Pelantikan OSIS Masa Bakti 2025/2026 dilaksanakan pada 6 April 2026.</p></div></div>
-<div class="gallery-item reveal" data-full="galeri4.jpg"><img alt="MPLS SMP 4 SIGI" onerror="fallbackImage(this, 'MPLS')" src="galeri4.jpg"/><div class="gallery-caption"><h3>MPLS</h3><p>Dokumentasi Masa Pengenalan Lingkungan Sekolah.</p></div></div>
+<div class="gallery-item reveal" data-full="galeri4.mp4" data-type="video">
+<video class="gallery-video" autoplay muted loop playsinline preload="metadata" poster="galeri4.jpg" aria-label="Perpisahan kelas 9 SMP 4 SIGI">
+<source src="galeri4.mp4" type="video/mp4">
+Browser kamu tidak mendukung video.
+</video>
+<div class="gallery-caption"><h3>Perpisahan Kelas 9</h3><p>Dokumentasi acara perpisahan kelas 9 SMP 4 SIGI.</p></div>
+</div>
 <div class="gallery-item reveal" data-full="galeri5.jpg"><img alt="Lingkungan SMP 4 SIGI" onerror="fallbackImage(this, 'Lingkungan Sekolah')" src="galeri5.jpg"/><div class="gallery-caption"><h3>Lingkungan Sekolah</h3><p>Suasana sekolah yang nyaman dan mendukung kegiatan belajar.</p></div></div>
 <div class="gallery-item reveal" data-full="galeri6.jpg"><img alt="Dokumentasi SMP 4 SIGI" onerror="fallbackImage(this, 'Dokumentasi Sekolah')" src="galeri6.jpg"/><div class="gallery-caption"><h3>Dokumentasi Sekolah</h3><p>Foto kegiatan dan momen sekolah SMP Negeri 4 Sigi.</p></div></div>
 </div>
@@ -528,8 +534,12 @@
 <button aria-label="Kembali ke atas" class="back-top" id="backTop"><i class="fa-solid fa-arrow-up"></i></button>
 <div aria-hidden="true" class="modal" id="imageModal">
 <div class="modal-card">
-<button aria-label="Tutup gambar" class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+<button aria-label="Tutup galeri" class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
 <img alt="Preview galeri" id="modalImage" src=""/>
+<video id="modalVideo" autoplay muted loop playsinline preload="metadata">
+<source id="modalVideoSource" src="" type="video/mp4">
+Browser kamu tidak mendukung video.
+</video>
 </div>
 </div>
 <footer>
@@ -565,7 +575,7 @@
 </ul>
 </div>
 </div>
-<div class="container footer-bottom">© <span id="yearNow"></span> SMP 4 SIGI </div>
+<div class="container footer-bottom">© <span id="yearNow"></span> SMP 4 SIGI. Website informasi sekolah.</div>
 </footer>
 <script src="script.js"></script>
 </body>
