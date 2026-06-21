@@ -889,17 +889,15 @@ footer {
 }
 
 /* FIX FINAL: CARD MAJU SAAT DIPENCET DI DESKTOP + MOBILE */
-.card:active,
-.stat-card:active,
-.gallery-item:active,
-.info-card:active,
-.btn:active {
-    transform: translate3d(0, -10px, 0) scale(1.04) !important;
-    box-shadow: 0 24px 60px rgba(30, 64, 175, 0.28) !important;
-    z-index: 999 !important;
+.card,
+.stat-card,
+.gallery-item,
+.info-card,
+.btn {
+    will-change: transform;
 }
 
-.tap-pop,
+/* efek maju saat dipencet */
 .card.tap-pop,
 .stat-card.tap-pop,
 .gallery-item.tap-pop,
@@ -910,19 +908,18 @@ footer {
     z-index: 999 !important;
 }
 
-.gallery-item:active img,
+/* khusus gambar galeri */
 .gallery-item.tap-pop img {
     transform: scale(1.06) !important;
 }
 
+/* efek tombol saat dipencet */
+.btn.tap-pop {
+    transform: translate3d(0, -6px, 0) scale(1.04) !important;
+}
+
 /* KHUSUS HP */
 @media (max-width: 768px) {
-    .card:active,
-    .stat-card:active,
-    .gallery-item:active,
-    .info-card:active,
-    .btn:active,
-    .tap-pop,
     .card.tap-pop,
     .stat-card.tap-pop,
     .gallery-item.tap-pop,
@@ -933,7 +930,6 @@ footer {
         z-index: 999 !important;
     }
 
-    .gallery-item:active img,
     .gallery-item.tap-pop img {
         transform: scale(1.045) !important;
     }
