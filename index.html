@@ -91,498 +91,574 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="topbar">
-<div class="wide-container topbar-inner">
-<div class="topbar-group">
-<a class="topbar-pill" href="mailto:smpn4sigi@gmail.com"><i class="fa-solid fa-envelope"></i><span>smpn4sigi@gmail.com</span></a>
-<a class="topbar-pill" href="https://www.google.com/maps/search/?api=1&amp;query=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi" rel="noopener" target="_blank"><i class="fa-solid fa-location-dot"></i><span>Kotapulu, Dolo, Sigi</span></a>
+  <div class="wide-container topbar-inner">
+    <div class="topbar-group">
+      <a class="topbar-pill" href="mailto:smpn4sigi@gmail.com"><i class="fa-solid fa-envelope"></i><span>smpn4sigi@gmail.com</span></a>
+      <a class="topbar-pill" href="https://www.google.com/maps/search/?api=1&amp;query=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi" rel="noopener" target="_blank"><i class="fa-solid fa-location-dot"></i><span>Kotapulu, Dolo, Sigi</span></a>
+    </div>
+    <div class="topbar-group">
+      <span class="topbar-pill"><i class="fa-solid fa-clock"></i><span>Senin - Jumat, 07.00 - 15.00 WITA</span></span>
+      <span class="topbar-pill topbar-clock" id="liveClock">--:-- WITA</span>
+    </div>
+  </div>
 </div>
-<div class="topbar-group">
-<span class="topbar-pill"><i class="fa-solid fa-clock"></i><span>Senin - Jumat, 07.00 - 15.00 WITA</span></span>
-<span class="topbar-pill topbar-clock" id="liveClock">--:-- WITA</span>
-</div>
-</div>
-</div>
+
 <header class="site-header" id="siteHeader">
-<div class="wide-container navbar">
-<button aria-label="Buka Beranda" class="brand" data-page="beranda" type="button">
-<span class="brand-logo"><img alt="Logo SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP"/></span>
-<span>
-<span class="brand-title">SMP 4 SIGI</span>
-<span class="brand-subtitle">SMP Negeri 4 Sigi</span>
-</span>
-</button>
-<nav aria-label="Navigasi utama" class="nav-links">
-<button class="nav-link active" data-page="beranda" type="button">Beranda</button>
-<button class="nav-link" data-page="profil" type="button">Profil</button>
-<button class="nav-link" data-page="akademik" type="button">Akademik</button>
-<button class="nav-link" data-page="fasilitas" type="button">Fasilitas</button>
-<button class="nav-link" data-page="mpls" type="button">MPLS</button>
-<button class="nav-link" data-page="ekskul" type="button">Ekskul</button>
-<button class="nav-link" data-page="galeri" type="button">Galeri</button>
-<button class="nav-link" data-page="berita" type="button">Berita</button>
-<button class="nav-link" data-page="kontak" type="button">Kontak</button>
-</nav>
-<button class="nav-cta" data-page="kontak" type="button"><i class="fa-solid fa-paper-plane"></i> Hubungi</button>
-<button aria-label="Buka menu" class="menu-toggle" id="menuToggle" type="button"><i class="fa-solid fa-bars"></i></button>
-</div>
+  <div class="wide-container navbar">
+    <button aria-label="Buka Beranda" class="brand" data-page="beranda" type="button">
+      <span class="brand-logo"><img alt="Logo SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP"></span>
+      <span>
+        <span class="brand-title">SMP 4 SIGI</span>
+        <span class="brand-subtitle">SMP Negeri 4 Sigi</span>
+      </span>
+    </button>
+
+    <nav aria-label="Navigasi utama" class="nav-links">
+      <button class="nav-link active" data-page="beranda" type="button">Beranda</button>
+      <button class="nav-link" data-page="profil" type="button">Profil</button>
+      <button class="nav-link" data-page="akademik" type="button">Akademik</button>
+      <button class="nav-link" data-page="fasilitas" type="button">Fasilitas</button>
+      <button class="nav-link" data-page="mpls" type="button">MPLS</button>
+      <button class="nav-link" data-page="ekskul" type="button">Ekskul</button>
+      <button class="nav-link" data-page="informasi" type="button">Informasi</button>
+      <button class="nav-link" data-page="berita" type="button">Berita</button>
+      <button class="nav-link" data-page="kontak" type="button">Kontak</button>
+    </nav>
+
+    <button class="nav-cta" data-page="kontak" type="button"><i class="fa-solid fa-paper-plane"></i> Hubungi</button>
+    <button aria-label="Buka menu" class="menu-toggle" id="menuToggle" type="button"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </header>
+
 <nav aria-label="Navigasi mobile" class="mobile-menu" id="mobileMenu">
-<button class="nav-link active" data-page="beranda" type="button"><i class="fa-solid fa-house"></i> Beranda</button>
-<button class="nav-link" data-page="profil" type="button"><i class="fa-solid fa-school"></i> Profil</button>
-<button class="nav-link" data-page="akademik" type="button"><i class="fa-solid fa-book-open"></i> Akademik</button>
-<button class="nav-link" data-page="fasilitas" type="button"><i class="fa-solid fa-building"></i> Fasilitas</button>
-<button class="nav-link" data-page="mpls" type="button"><i class="fa-solid fa-bullhorn"></i> MPLS</button>
-<button class="nav-link" data-page="ekskul" type="button"><i class="fa-solid fa-star"></i> Ekskul</button>
-<button class="nav-link" data-page="galeri" type="button"><i class="fa-solid fa-images"></i> Galeri</button>
-<button class="nav-link" data-page="berita" type="button"><i class="fa-solid fa-newspaper"></i> Berita</button>
-<button class="nav-link" data-page="kontak" type="button"><i class="fa-solid fa-phone"></i> Kontak</button>
+  <button class="nav-link active" data-page="beranda" type="button"><i class="fa-solid fa-house"></i> Beranda</button>
+  <button class="nav-link" data-page="profil" type="button"><i class="fa-solid fa-school"></i> Profil</button>
+  <button class="nav-link" data-page="akademik" type="button"><i class="fa-solid fa-book-open"></i> Akademik</button>
+  <button class="nav-link" data-page="fasilitas" type="button"><i class="fa-solid fa-building"></i> Fasilitas</button>
+  <button class="nav-link" data-page="mpls" type="button"><i class="fa-solid fa-bullhorn"></i> MPLS</button>
+  <button class="nav-link" data-page="ekskul" type="button"><i class="fa-solid fa-star"></i> Ekskul</button>
+  <button class="nav-link" data-page="informasi" type="button"><i class="fa-solid fa-circle-info"></i> Informasi</button>
+  <button class="nav-link" data-page="berita" type="button"><i class="fa-solid fa-newspaper"></i> Berita</button>
+  <button class="nav-link" data-page="kontak" type="button"><i class="fa-solid fa-phone"></i> Kontak</button>
 </nav>
+
 <main>
-<!-- BERANDA -->
+
 <section class="page is-active" data-title="Beranda" id="beranda">
-<div class="home-hero">
-<div class="container hero-grid">
-<div>
-<div class="hero-kicker"><i class="fa-solid fa-award"></i> Sekolah Berakreditasi A</div>
-<h1 class="hero-title">SMP 4 SIGI</h1>
-<h2 class="hero-subtitle">SMP Negeri 4 Sigi Dolo, sekolah negeri berakreditasi A di Kabupaten Sigi.</h2>
-<p class="hero-desc">Website informasi SMP Negeri 4 Sigi untuk menyajikan profil sekolah, kegiatan, program akademik, ekstrakurikuler, galeri, dan kontak sekolah secara rapi.</p>
-<div class="hero-actions">
-<button class="btn btn-primary" data-page="profil" type="button"><i class="fa-solid fa-school"></i> Lihat Profil</button>
-<button class="btn btn-outline" data-page="mpls" type="button"><i class="fa-solid fa-bullhorn"></i> Info MPLS</button>
-</div>
-<p class="hero-note"><i aria-hidden="true" class="fa-solid fa-award"></i> NPSN 40200659 • Berdiri sejak 30 Juli 1980</p>
-</div>
-<div aria-label="Kartu profil SMP 4 SIGI" class="hero-card">
-<img alt="Logo dan identitas SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP"/>
-<div class="hero-floating"><i class="fa-solid fa-medal"></i><span>Akreditasi A</span></div>
-<div class="hero-card-content">
-<h3>SMP Negeri 4 Sigi Dolo</h3>
-<p>Berakhlak mulia, berprestasi, disiplin, peduli lingkungan, dan siap bersaing di era global.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="stats-grid reveal">
-<div class="stat-card"><h3>A</h3><p>Akreditasi</p></div>
-<div class="stat-card"><h3>40200659</h3><p>NPSN</p></div>
-<div class="stat-card"><h3>1980</h3><p>Berdiri Sejak</p></div>
-<div class="stat-card"><h3>Merdeka</h3><p>Kurikulum</p></div>
-</div>
-</div>
-<section class="section">
-<div class="container">
-<div class="section-title reveal">
-<span class="eyebrow"><i class="fa-solid fa-layer-group"></i> Menu Utama</span>
-<h2>Pilih halaman yang ingin dibuka</h2>
-<p>Semua bagian sudah dipisah seperti halaman tersendiri, tetapi tetap berada dalam satu file HTML agar mudah diunggah ke hosting.</p>
-</div>
-<div class="quick-pages">
-<button class="card quick-card reveal" data-page="profil" type="button"><div class="icon-box"><i class="fa-solid fa-school"></i></div><h3>Profil Sekolah</h3><p>Identitas, sejarah, visi, misi, dan data sekolah.</p></button>
-<button class="card quick-card reveal" data-page="akademik" type="button"><div class="icon-box"><i class="fa-solid fa-book-open-reader"></i></div><h3>Akademik</h3><p>Kurikulum, program pembelajaran, dan pendidikan karakter.</p></button>
-<button class="card quick-card reveal" data-page="fasilitas" type="button"><div class="icon-box"><i class="fa-solid fa-building-columns"></i></div><h3>Fasilitas</h3><p>Ruang belajar, perpustakaan, laboratorium, dan lingkungan sekolah.</p></button>
-<button class="card quick-card reveal" data-page="mpls" type="button"><div class="icon-box"><i class="fa-solid fa-bullhorn"></i></div><h3>Info MPLS</h3><p>Informasi pengenalan lingkungan sekolah untuk peserta didik baru.</p></button>
-<button class="card quick-card reveal" data-page="galeri" type="button"><div class="icon-box"><i class="fa-solid fa-camera-retro"></i></div><h3>Galeri</h3><p>Dokumentasi kegiatan dan momen sekolah.</p></button>
-<button class="card quick-card reveal" data-page="kontak" type="button"><div class="icon-box"><i class="fa-solid fa-address-book"></i></div><h3>Kontak</h3><p>Alamat, email, sosial media, dan peta lokasi sekolah.</p></button>
-</div>
-</div>
+  <div class="home-hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-kicker"><i class="fa-solid fa-award"></i> Sekolah Berakreditasi A</div>
+        <h1 class="hero-title">SMP 4 SIGI</h1>
+        <h2 class="hero-subtitle">SMP Negeri 4 Sigi Dolo, sekolah negeri berakreditasi A di Kabupaten Sigi.</h2>
+        <p class="hero-desc">Website informasi SMP Negeri 4 Sigi untuk menyajikan profil sekolah, kegiatan, program akademik, ekstrakurikuler, galeri, dan kontak sekolah secara rapi.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-page="profil" type="button"><i class="fa-solid fa-school"></i> Lihat Profil</button>
+          <button class="btn btn-outline" data-page="mpls" type="button"><i class="fa-solid fa-bullhorn"></i> Info MPLS</button>
+        </div>
+        <p class="hero-note"><i aria-hidden="true" class="fa-solid fa-award"></i> NPSN 40200659 • Berdiri sejak 30 Juli 1980</p>
+      </div>
+
+      <div aria-label="Kartu profil SMP 4 SIGI" class="hero-card">
+        <img alt="Logo dan identitas SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP">
+        <div class="hero-floating"><i class="fa-solid fa-medal"></i><span>Akreditasi A</span></div>
+        <div class="hero-card-content">
+          <h3>SMP Negeri 4 Sigi Dolo</h3>
+          <p>Berakhlak mulia, berprestasi, disiplin, peduli lingkungan, dan siap bersaing di era global.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat-card"><h3>A</h3><p>Akreditasi</p></div>
+      <div class="stat-card"><h3>40200659</h3><p>NPSN</p></div>
+      <div class="stat-card"><h3>1980</h3><p>Berdiri Sejak</p></div>
+      <div class="stat-card"><h3>Merdeka</h3><p>Kurikulum</p></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="eyebrow"><i class="fa-solid fa-layer-group"></i> Menu Utama</span>
+        <h2>Pilih halaman yang ingin dibuka</h2>
+        <p>Semua bagian sudah dipisah seperti halaman tersendiri, tetapi tetap berada dalam satu file HTML agar mudah diunggah ke hosting.</p>
+      </div>
+
+      <div class="quick-pages">
+        <button class="card quick-card reveal" data-page="profil" type="button"><div class="icon-box"><i class="fa-solid fa-school"></i></div><h3>Profil Sekolah</h3><p>Identitas, sejarah, visi, misi, dan data sekolah.</p></button>
+        <button class="card quick-card reveal" data-page="akademik" type="button"><div class="icon-box"><i class="fa-solid fa-book-open-reader"></i></div><h3>Akademik</h3><p>Kurikulum, program pembelajaran, dan pendidikan karakter.</p></button>
+        <button class="card quick-card reveal" data-page="fasilitas" type="button"><div class="icon-box"><i class="fa-solid fa-building-columns"></i></div><h3>Fasilitas</h3><p>Ruang belajar, perpustakaan, laboratorium, dan lingkungan sekolah.</p></button>
+        <button class="card quick-card reveal" data-page="mpls" type="button"><div class="icon-box"><i class="fa-solid fa-bullhorn"></i></div><h3>Info MPLS</h3><p>Informasi pengenalan lingkungan sekolah untuk peserta didik baru.</p></button>
+        <button class="card quick-card reveal" data-page="berita" type="button"><div class="icon-box"><i class="fa-solid fa-newspaper"></i></div><h3>Berita</h3><p>Berita prestasi dan kabar utama sekolah.</p></button>
+        <button class="card quick-card reveal" data-page="informasi" type="button"><div class="icon-box"><i class="fa-solid fa-circle-info"></i></div><h3>Informasi</h3><p>Informasi kegiatan, agenda, dan dokumentasi sekolah.</p></button>
+        <button class="card quick-card reveal" data-page="kontak" type="button"><div class="icon-box"><i class="fa-solid fa-address-book"></i></div><h3>Kontak</h3><p>Alamat, email, sosial media, dan peta lokasi sekolah.</p></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="info-strip reveal">
+        <i class="fa-solid fa-bullhorn"></i>
+        <div>
+          <h3>Informasi MPLS Peserta Didik Baru</h3>
+          <p>Masa Pengenalan Lingkungan Sekolah SMP 4 SIGI direncanakan pada 6–13 Juli 2026. Persiapkan perlengkapan, jaga kesehatan, dan ikuti arahan sekolah.</p>
+        </div>
+        <button class="btn btn-outline" data-page="mpls" style="background:#fff;color:#1e40af" type="button">Buka MPLS</button>
+      </div>
+    </div>
+  </section>
 </section>
-<section class="section" style="padding-top:0">
-<div class="container">
-<div class="info-strip reveal">
-<i class="fa-solid fa-bullhorn"></i>
-<div>
-<h3>Informasi MPLS Peserta Didik Baru</h3>
-<p>Masa Pengenalan Lingkungan Sekolah SMP 4 SIGI direncanakan pada 6–13 Juli 2026. Persiapkan perlengkapan, jaga kesehatan, dan ikuti arahan sekolah.</p>
-</div>
-<button class="btn btn-outline" data-page="mpls" style="background:#fff;color:#1e40af" type="button">Buka MPLS</button>
-</div>
-</div>
-</section>
-</section>
-<!-- PROFIL -->
+
 <section class="page" data-title="Profil Sekolah" id="profil">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Profil</div>
-<h1>Profil Sekolah</h1>
-<p>Informasi identitas, sejarah singkat, visi, misi, dan komitmen SMP Negeri 4 Sigi.</p>
-</div>
-<div class="hero-badge-card">
-<img alt="Logo SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP"/>
-<strong>SMP Negeri 4 Sigi</strong>
-<span>Desa Kotapulu, Kecamatan Dolo</span>
-</div>
-</div>
-</div>
-<div class="section">
-<div class="container grid-2">
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-circle-info"></i> Identitas</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Data Sekolah</h3>
-<table class="data-table">
-<tr><td>Nama Sekolah</td><td>SMP Negeri 4 Sigi</td></tr>
-<tr><td>Nama Populer</td><td>SMP 4 SIGI</td></tr>
-<tr><td>NPSN</td><td>40200659</td></tr>
-<tr><td>Status</td><td>Negeri</td></tr>
-<tr><td>Akreditasi</td><td>A</td></tr>
-<tr><td>Kurikulum</td><td>Kurikulum Merdeka</td></tr>
-<tr><td>Kepala Sekolah</td><td>Mariati</td></tr>
-<tr><td>Tanggal Berdiri</td><td>30 Juli 1980</td></tr>
-<tr><td>Alamat</td><td>Jalan Poros Palu-Kulawi KM. 13, Kotapulu, Dolo, Kabupaten Sigi</td></tr>
-</table>
-</div>
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-landmark"></i> Sejarah</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Sejarah Singkat</h3>
-<p>SMP Negeri 4 Sigi berdiri dan beroperasi sejak 30 Juli 1980. Sekolah ini berlokasi di Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p>
-<p style="margin-top:14px">Sebagai sekolah negeri, SMP 4 SIGI terus berupaya menghadirkan layanan pendidikan yang bermutu, nyaman, disiplin, dan berorientasi pada pengembangan potensi peserta didik.</p>
-<div class="grid-2" style="margin-top:18px">
-<div class="soft-card"><h3>Komitmen</h3><p>Pendidikan berkualitas dan berkarakter.</p></div>
-<div class="soft-card"><h3>Lingkungan</h3><p>Belajar nyaman, aktif, dan peduli lingkungan.</p></div>
-</div>
-</div>
-</div>
-<div class="container" style="margin-top:24px">
-<div class="grid-2">
-<div class="card vision-card reveal">
-<span class="eyebrow"><i class="fa-solid fa-eye"></i> Visi</span>
-<h3 style="font-size:1.8rem;margin:14px 0 12px">Arah Sekolah</h3>
-<p style="font-size:1.1rem;color:#1e40af;font-weight:900">“Terwujudnya peserta didik yang berakhlak mulia, berprestasi, disiplin, peduli lingkungan, dan mampu bersaing di era global.”</p>
-</div>
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-list-check"></i> Misi</span>
-<h3 style="font-size:1.8rem;margin:14px 0 12px">Langkah Utama</h3>
-<ul class="list-check">
-<li><i class="fa-solid fa-circle-check"></i><span>Meningkatkan pembelajaran yang aktif, kreatif, dan menyenangkan.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Membentuk peserta didik yang disiplin, santun, dan bertanggung jawab.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Mendorong prestasi akademik dan non-akademik sesuai minat siswa.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Membiasakan kepedulian terhadap kebersihan dan lingkungan sekolah.</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Profil</div>
+        <h1>Profil Sekolah</h1>
+        <p>Informasi identitas, sejarah singkat, visi, misi, dan komitmen SMP Negeri 4 Sigi.</p>
+      </div>
+      <div class="hero-badge-card">
+        <img alt="Logo SMP 4 SIGI" onerror="fallbackImage(this, 'SMP 4 SIGI')" src="smpn4sigi.WebP">
+        <strong>SMP Negeri 4 Sigi</strong>
+        <span>Desa Kotapulu, Kecamatan Dolo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container grid-2">
+      <div class="card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-circle-info"></i> Identitas</span>
+        <h3 style="font-size:2rem;margin:14px 0 16px">Data Sekolah</h3>
+        <table class="data-table">
+          <tr><td>Nama Sekolah</td><td>SMP Negeri 4 Sigi</td></tr>
+          <tr><td>Nama Populer</td><td>SMP 4 SIGI</td></tr>
+          <tr><td>NPSN</td><td>40200659</td></tr>
+          <tr><td>Status</td><td>Negeri</td></tr>
+          <tr><td>Akreditasi</td><td>A</td></tr>
+          <tr><td>Kurikulum</td><td>Kurikulum Merdeka</td></tr>
+          <tr><td>Kepala Sekolah</td><td>Mariati</td></tr>
+          <tr><td>Tanggal Berdiri</td><td>30 Juli 1980</td></tr>
+          <tr><td>Alamat</td><td>Jalan Poros Palu-Kulawi KM. 13, Kotapulu, Dolo, Kabupaten Sigi</td></tr>
+        </table>
+      </div>
+
+      <div class="card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-landmark"></i> Sejarah</span>
+        <h3 style="font-size:2rem;margin:14px 0 16px">Sejarah Singkat</h3>
+        <p>SMP Negeri 4 Sigi berdiri dan beroperasi sejak 30 Juli 1980. Sekolah ini berlokasi di Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p>
+        <p style="margin-top:14px">Sebagai sekolah negeri, SMP 4 SIGI terus berupaya menghadirkan layanan pendidikan yang bermutu, nyaman, disiplin, dan berorientasi pada pengembangan potensi peserta didik.</p>
+        <div class="grid-2" style="margin-top:18px">
+          <div class="soft-card"><h3>Komitmen</h3><p>Pendidikan berkualitas dan berkarakter.</p></div>
+          <div class="soft-card"><h3>Lingkungan</h3><p>Belajar nyaman, aktif, dan peduli lingkungan.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:24px">
+      <div class="grid-2">
+        <div class="card vision-card reveal">
+          <span class="eyebrow"><i class="fa-solid fa-eye"></i> Visi</span>
+          <h3 style="font-size:1.8rem;margin:14px 0 12px">Arah Sekolah</h3>
+          <p style="font-size:1.1rem;color:#1e40af;font-weight:900">“Terwujudnya peserta didik yang berakhlak mulia, berprestasi, disiplin, peduli lingkungan, dan mampu bersaing di era global.”</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="eyebrow"><i class="fa-solid fa-list-check"></i> Misi</span>
+          <h3 style="font-size:1.8rem;margin:14px 0 12px">Langkah Utama</h3>
+          <ul class="list-check">
+            <li><i class="fa-solid fa-circle-check"></i><span>Meningkatkan pembelajaran yang aktif, kreatif, dan menyenangkan.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Membentuk peserta didik yang disiplin, santun, dan bertanggung jawab.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Mendorong prestasi akademik dan non-akademik sesuai minat siswa.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Membiasakan kepedulian terhadap kebersihan dan lingkungan sekolah.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- AKADEMIK -->
+
 <section class="page" data-title="Akademik" id="akademik">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Akademik</div>
-<h1>Akademik</h1>
-<p>Program pembelajaran, kurikulum, literasi, dan penguatan karakter peserta didik SMP 4 SIGI.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-book-open-reader" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Kurikulum Merdeka</strong><span>Pembelajaran aktif dan berkarakter</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container">
-<div class="section-title reveal">
-<span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Program Pembelajaran</span>
-<h2>Pembelajaran yang aktif dan bermakna</h2>
-<p>Fokus akademik diarahkan untuk meningkatkan pemahaman, keterampilan, karakter, serta kreativitas siswa.</p>
-</div>
-<div class="grid-3">
-<div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-book"></i></div><h3>Kurikulum Merdeka</h3><p>Pembelajaran dirancang agar siswa lebih aktif, mandiri, dan mampu memahami materi melalui pengalaman belajar yang bermakna.</p></div>
-<div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-user-shield"></i></div><h3>Pendidikan Karakter</h3><p>Pembiasaan disiplin, tanggung jawab, sopan santun, gotong royong, dan kepedulian sosial dalam kegiatan sekolah.</p></div>
-<div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div><h3>Literasi Digital</h3><p>Mendorong siswa memahami teknologi secara positif untuk belajar, mencari informasi, dan berkarya.</p></div>
-</div>
-</div>
-</div>
-<div class="section" style="padding-top:0">
-<div class="container grid-2">
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-chart-line"></i> Fokus Akademik</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Pilar Pembelajaran</h3>
-<ul class="list-check">
-<li><i class="fa-solid fa-circle-check"></i><span>Pembelajaran berbasis proyek dan penguatan Profil Pelajar Pancasila.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Penguatan literasi, numerasi, dan kemampuan berpikir kritis.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Pembinaan siswa melalui kegiatan akademik dan non-akademik.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Evaluasi belajar yang mendorong perkembangan siswa secara bertahap.</span></li>
-</ul>
-</div>
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-trophy"></i> Prestasi</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Ruang Berkembang</h3>
-<p>Peserta didik didorong untuk mengikuti lomba, kegiatan literasi, olahraga, seni, PMR, Pramuka, OSIS, serta kegiatan pengembangan diri lain sesuai bakat dan minat.</p>
-<button class="btn btn-primary" data-page="ekskul" style="margin-top:18px" type="button"><i class="fa-solid fa-star"></i> Lihat Ekskul</button>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Akademik</div>
+        <h1>Akademik</h1>
+        <p>Program pembelajaran, kurikulum, literasi, dan penguatan karakter peserta didik SMP 4 SIGI.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-book-open-reader" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Kurikulum Merdeka</strong><span>Pembelajaran aktif dan berkarakter</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Program Pembelajaran</span>
+        <h2>Pembelajaran yang aktif dan bermakna</h2>
+        <p>Fokus akademik diarahkan untuk meningkatkan pemahaman, keterampilan, karakter, serta kreativitas siswa.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-book"></i></div><h3>Kurikulum Merdeka</h3><p>Pembelajaran dirancang agar siswa lebih aktif, mandiri, dan mampu memahami materi melalui pengalaman belajar yang bermakna.</p></div>
+        <div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-user-shield"></i></div><h3>Pendidikan Karakter</h3><p>Pembiasaan disiplin, tanggung jawab, sopan santun, gotong royong, dan kepedulian sosial dalam kegiatan sekolah.</p></div>
+        <div class="card feature-card reveal"><div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div><h3>Literasi Digital</h3><p>Mendorong siswa memahami teknologi secara positif untuk belajar, mencari informasi, dan berkarya.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="container grid-2">
+      <div class="card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-chart-line"></i> Fokus Akademik</span>
+        <h3 style="font-size:2rem;margin:14px 0 16px">Pilar Pembelajaran</h3>
+        <ul class="list-check">
+          <li><i class="fa-solid fa-circle-check"></i><span>Pembelajaran berbasis proyek dan penguatan Profil Pelajar Pancasila.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Penguatan literasi, numerasi, dan kemampuan berpikir kritis.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Pembinaan siswa melalui kegiatan akademik dan non-akademik.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Evaluasi belajar yang mendorong perkembangan siswa secara bertahap.</span></li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-trophy"></i> Prestasi</span>
+        <h3 style="font-size:2rem;margin:14px 0 16px">Ruang Berkembang</h3>
+        <p>Peserta didik didorong untuk mengikuti lomba, kegiatan literasi, olahraga, seni, PMR, Pramuka, OSIS, serta kegiatan pengembangan diri lain sesuai bakat dan minat.</p>
+        <button class="btn btn-primary" data-page="ekskul" style="margin-top:18px" type="button"><i class="fa-solid fa-star"></i> Lihat Ekskul</button>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- FASILITAS -->
+
 <section class="page" data-title="Fasilitas" id="fasilitas">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Fasilitas</div>
-<h1>Fasilitas</h1>
-<p>Fasilitas sekolah disusun untuk menunjang pembelajaran, kegiatan siswa, dan kenyamanan lingkungan sekolah.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-building-columns" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Ruang Belajar Nyaman</strong><span>Mendukung kegiatan akademik dan non-akademik</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container facility-grid">
-<div class="facility-main reveal">
-<img alt="Lingkungan SMP 4 SIGI" onerror="fallbackImage(this, 'Lingkungan SMP 4 SIGI')" src="galeri5.jpg"/>
-<div class="facility-main-content">
-<h3>Lingkungan Sekolah</h3>
-<p>Suasana sekolah dibuat nyaman untuk mendukung kegiatan belajar, pembinaan karakter, dan aktivitas siswa.</p>
-</div>
-</div>
-<div class="facility-list"><div class="soft-card facility-item reveal"><i class="fa-solid fa-chalkboard-user"></i><div><h3>Ruang Kelas</h3><p>Ruang belajar untuk kegiatan pembelajaran harian.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-book-open"></i><div><h3>Perpustakaan</h3><p>Mendukung literasi dan kebiasaan membaca siswa.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-flask"></i><div><h3>Laboratorium</h3><p>Tempat praktik dan kegiatan pembelajaran berbasis eksperimen.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-volleyball"></i><div><h3>Lapangan</h3><p>Digunakan untuk olahraga, upacara, dan kegiatan sekolah.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-dumbbell"></i><div><h3>Alat Olahraga</h3><p>Perlengkapan olahraga untuk menunjang praktik PJOK, latihan, dan kegiatan kebugaran siswa.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-building-columns"></i><div><h3>Aula</h3><p>Ruang serbaguna untuk pertemuan, pembinaan, kegiatan sekolah, dan acara bersama.</p></div></div><div class="soft-card facility-item reveal"><i class="fa-solid fa-mosque"></i><div><h3>Sarana Ibadah</h3><p>Mendukung pembinaan spiritual dan karakter siswa.</p></div></div></div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Fasilitas</div>
+        <h1>Fasilitas</h1>
+        <p>Fasilitas sekolah disusun untuk menunjang pembelajaran, kegiatan siswa, dan kenyamanan lingkungan sekolah.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-building-columns" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Ruang Belajar Nyaman</strong><span>Mendukung kegiatan akademik dan non-akademik</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container facility-grid">
+      <div class="facility-main reveal">
+        <img alt="Lingkungan SMP 4 SIGI" onerror="fallbackImage(this, 'Lingkungan SMP 4 SIGI')" src="galeri5.jpg">
+        <div class="facility-main-content">
+          <h3>Lingkungan Sekolah</h3>
+          <p>Suasana sekolah dibuat nyaman untuk mendukung kegiatan belajar, pembinaan karakter, dan aktivitas siswa.</p>
+        </div>
+      </div>
+
+      <div class="facility-list">
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-chalkboard-user"></i><div><h3>Ruang Kelas</h3><p>Ruang belajar untuk kegiatan pembelajaran harian.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-book-open"></i><div><h3>Perpustakaan</h3><p>Mendukung literasi dan kebiasaan membaca siswa.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-flask"></i><div><h3>Laboratorium</h3><p>Tempat praktik dan kegiatan pembelajaran berbasis eksperimen.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-volleyball"></i><div><h3>Lapangan</h3><p>Digunakan untuk olahraga, upacara, dan kegiatan sekolah.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-dumbbell"></i><div><h3>Alat Olahraga</h3><p>Perlengkapan olahraga untuk menunjang praktik PJOK, latihan, dan kegiatan kebugaran siswa.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-building-columns"></i><div><h3>Aula</h3><p>Ruang serbaguna untuk pertemuan, pembinaan, kegiatan sekolah, dan acara bersama.</p></div></div>
+        <div class="soft-card facility-item reveal"><i class="fa-solid fa-mosque"></i><div><h3>Sarana Ibadah</h3><p>Mendukung pembinaan spiritual dan karakter siswa.</p></div></div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- MPLS -->
+
 <section class="page" data-title="MPLS" id="mpls">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> MPLS</div>
-<h1>Info MPLS</h1>
-<p>Informasi Masa Pengenalan Lingkungan Sekolah untuk peserta didik baru SMP 4 SIGI.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-bullhorn" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>6–13 Juli 2026</strong><span>Jadwal MPLS peserta didik baru</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container">
-<div class="grid-2">
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-calendar-days"></i> Detail Kegiatan</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">MPLS SMP 4 SIGI 2026/2027</h3>
-<p>Masa Pengenalan Lingkungan Sekolah SMP 4 SIGI direncanakan pada tanggal <strong>6–13 Juli 2026</strong>. Kegiatan ini membantu peserta didik baru mengenal lingkungan sekolah, tata tertib, guru, teman, fasilitas, budaya sekolah, dan program sekolah.</p>
-<div class="mpls-detail-grid" style="margin-top:18px">
-<div class="soft-card"><h3>Tanggal</h3><p>6–13 Juli 2026</p></div>
-<div class="soft-card"><h3>Tempat</h3><p>SMP 4 SIGI</p></div>
-<div class="soft-card"><h3>Status</h3><p>Persiapan</p></div>
-<div class="soft-card"><h3>Tahun Ajaran</h3><p>2026/2027</p></div>
-</div>
-</div>
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-clipboard-check"></i> Perlengkapan</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Yang Perlu Disiapkan</h3>
-<ul class="list-check">
-<li><i class="fa-solid fa-circle-check"></i><span>Seragam sekolah lengkap sesuai arahan sekolah.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Alat tulis dan buku catatan.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Botol minum dan bekal pribadi.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Perlengkapan ibadah.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Topi atau atribut lain sesuai arahan sekolah.</span></li>
-</ul>
-</div>
-</div>
-<div class="card reveal mpls-order-card">
-<span class="eyebrow"><i class="fa-solid fa-list-ol"></i> Urutan MPLS</span>
-<h3 style="font-size:2rem;margin:14px 0 20px">Urutan Jadwal Kegiatan</h3>
-<div class="mpls-timeline">
-<div class="mpls-step"><strong>1</strong><div><h4>Senin, 6 Juli 2026</h4><p>Pembukaan MPLS, pengarahan awal, pengenalan guru, wali kelas, dan lingkungan sekolah.</p></div></div>
-<div class="mpls-step"><strong>2</strong><div><h4>Selasa, 7 Juli 2026</h4><p>Pengenalan tata tertib, budaya sekolah, kebiasaan disiplin, dan etika peserta didik.</p></div></div>
-<div class="mpls-step"><strong>3</strong><div><h4>Rabu, 8 Juli 2026</h4><p>Pengenalan fasilitas sekolah, ruang belajar, perpustakaan, laboratorium, lapangan, aula, dan sarana ibadah.</p></div></div>
-<div class="mpls-step"><strong>4</strong><div><h4>Kamis, 9 Juli 2026</h4><p>Materi karakter, anti perundungan, kebersihan lingkungan, dan penguatan Profil Pelajar Pancasila.</p></div></div>
-<div class="mpls-step"><strong>5</strong><div><h4>Jumat, 10 Juli 2026</h4><p>Pengenalan kegiatan OSIS, Pramuka, PMR, olahraga, dan pilihan ekstrakurikuler sekolah.</p></div></div>
-<div class="mpls-step"><strong>6</strong><div><h4>Senin, 13 Juli 2026</h4><p>Refleksi, penutupan MPLS, dan arahan persiapan mengikuti pembelajaran reguler.</p></div></div>
-</div>
-<p class="schedule-note">* Urutan kegiatan dapat disesuaikan kembali mengikuti arahan resmi pihak SMP 4 SIGI.</p>
-</div>
-<div class="card reveal rules-card">
-<span class="eyebrow"><i class="fa-solid fa-shield-heart"></i> Tata Tertib MPLS</span>
-<div class="rules-grid">
-<ul class="list-check">
-<li><i class="fa-solid fa-circle-check"></i><span>Datang tepat waktu.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Mengikuti kegiatan dengan tertib.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Berpakaian sesuai arahan.</span></li>
-</ul>
-<ul class="list-check">
-<li><i class="fa-solid fa-circle-check"></i><span>Menjaga kebersihan dan kesopanan.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Dilarang membawa barang berbahaya.</span></li>
-<li><i class="fa-solid fa-circle-check"></i><span>Dilarang melakukan perundungan.</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> MPLS</div>
+        <h1>Info MPLS</h1>
+        <p>Informasi Masa Pengenalan Lingkungan Sekolah untuk peserta didik baru SMP 4 SIGI.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-bullhorn" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>6–13 Juli 2026</strong><span>Jadwal MPLS peserta didik baru</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card reveal">
+          <span class="eyebrow"><i class="fa-solid fa-calendar-days"></i> Detail Kegiatan</span>
+          <h3 style="font-size:2rem;margin:14px 0 16px">MPLS SMP 4 SIGI 2026/2027</h3>
+          <p>Masa Pengenalan Lingkungan Sekolah SMP 4 SIGI direncanakan pada tanggal <strong>6–13 Juli 2026</strong>. Kegiatan ini membantu peserta didik baru mengenal lingkungan sekolah, tata tertib, guru, teman, fasilitas, budaya sekolah, dan program sekolah.</p>
+          <div class="mpls-detail-grid" style="margin-top:18px">
+            <div class="soft-card"><h3>Tanggal</h3><p>6–13 Juli 2026</p></div>
+            <div class="soft-card"><h3>Tempat</h3><p>SMP 4 SIGI</p></div>
+            <div class="soft-card"><h3>Status</h3><p>Persiapan</p></div>
+            <div class="soft-card"><h3>Tahun Ajaran</h3><p>2026/2027</p></div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="eyebrow"><i class="fa-solid fa-clipboard-check"></i> Perlengkapan</span>
+          <h3 style="font-size:2rem;margin:14px 0 16px">Yang Perlu Disiapkan</h3>
+          <ul class="list-check">
+            <li><i class="fa-solid fa-circle-check"></i><span>Seragam sekolah lengkap sesuai arahan sekolah.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Alat tulis dan buku catatan.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Botol minum dan bekal pribadi.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Perlengkapan ibadah.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Topi atau atribut lain sesuai arahan sekolah.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card reveal mpls-order-card">
+        <span class="eyebrow"><i class="fa-solid fa-list-ol"></i> Urutan MPLS</span>
+        <h3 style="font-size:2rem;margin:14px 0 20px">Urutan Jadwal Kegiatan</h3>
+        <div class="mpls-timeline">
+          <div class="mpls-step"><strong>1</strong><div><h4>Senin, 6 Juli 2026</h4><p>Pembukaan MPLS, pengarahan awal, pengenalan guru, wali kelas, dan lingkungan sekolah.</p></div></div>
+          <div class="mpls-step"><strong>2</strong><div><h4>Selasa, 7 Juli 2026</h4><p>Pengenalan tata tertib, budaya sekolah, kebiasaan disiplin, dan etika peserta didik.</p></div></div>
+          <div class="mpls-step"><strong>3</strong><div><h4>Rabu, 8 Juli 2026</h4><p>Pengenalan fasilitas sekolah, ruang belajar, perpustakaan, laboratorium, lapangan, aula, dan sarana ibadah.</p></div></div>
+          <div class="mpls-step"><strong>4</strong><div><h4>Kamis, 9 Juli 2026</h4><p>Materi karakter, anti perundungan, kebersihan lingkungan, dan penguatan Profil Pelajar Pancasila.</p></div></div>
+          <div class="mpls-step"><strong>5</strong><div><h4>Jumat, 10 Juli 2026</h4><p>Pengenalan kegiatan OSIS, Pramuka, PMR, olahraga, dan pilihan ekstrakurikuler sekolah.</p></div></div>
+          <div class="mpls-step"><strong>6</strong><div><h4>Senin, 13 Juli 2026</h4><p>Refleksi, penutupan MPLS, dan arahan persiapan mengikuti pembelajaran reguler.</p></div></div>
+        </div>
+        <p class="schedule-note">* Urutan kegiatan dapat disesuaikan kembali mengikuti arahan resmi pihak SMP 4 SIGI.</p>
+      </div>
+
+      <div class="card reveal rules-card">
+        <span class="eyebrow"><i class="fa-solid fa-shield-heart"></i> Tata Tertib MPLS</span>
+        <div class="rules-grid">
+          <ul class="list-check">
+            <li><i class="fa-solid fa-circle-check"></i><span>Datang tepat waktu.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Mengikuti kegiatan dengan tertib.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Berpakaian sesuai arahan.</span></li>
+          </ul>
+          <ul class="list-check">
+            <li><i class="fa-solid fa-circle-check"></i><span>Menjaga kebersihan dan kesopanan.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Dilarang membawa barang berbahaya.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Dilarang melakukan perundungan.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- EKSKUL -->
+
 <section class="page" data-title="Ekstrakurikuler" id="ekskul">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Ekskul</div>
-<h1>Ekstrakurikuler</h1>
-<p>Kegiatan pengembangan minat, bakat, karakter, kepemimpinan, dan prestasi siswa SMP 4 SIGI.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-star" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Pengembangan Diri</strong><span>Akademik, seni, olahraga, dan kepemimpinan</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container">
-<div class="grid-3"><div class="card program-card reveal"><div class="program-image"><img alt="Pramuka SMP 4 SIGI" onerror="fallbackImage(this, 'Pramuka')" src="galeri2.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-campground"></i> Kepanduan</span><h3 style="margin-top:12px">Pramuka</h3><p>Melatih kedisiplinan, kemandirian, kepemimpinan, dan kerja sama.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="PMR SMP 4 SIGI" onerror="fallbackImage(this, 'PMR')" src="galeri1.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-hand-holding-medical"></i> Kemanusiaan</span><h3 style="margin-top:12px">PMR</h3><p>Membentuk kepedulian sosial, keterampilan pertolongan pertama, dan jiwa kemanusiaan.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Silat SMP 4 SIGI" onerror="fallbackImage(this, 'Silat')" src="galeri3.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-hand-fist"></i> Bela Diri</span><h3 style="margin-top:12px">Silat</h3><p>Mengembangkan kemampuan bela diri, ketahanan fisik, dan sportivitas.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Karate SMP 4 SIGI" onerror="fallbackImage(this, 'Karate')" src="galeri4.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-medal"></i> Bela Diri</span><h3 style="margin-top:12px">Karate</h3><p>Melatih fokus, kekuatan, keberanian, dan pengendalian diri.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Taekwondo SMP 4 SIGI" onerror="fallbackImage(this, 'Taekwondo')" src="smpn4sigi.WebP"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-bolt"></i> Bela Diri</span><h3 style="margin-top:12px">Taekwondo</h3><p>Mengasah kemampuan bela diri, kelincahan, dan disiplin.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Panjat Tebing SMP 4 SIGI" onerror="fallbackImage(this, 'Panjat Tebing')" src="galeri5.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-mountain"></i> Ketangkasan</span><h3 style="margin-top:12px">Panjat Tebing</h3><p>Melatih keberanian, strategi, kekuatan, dan konsentrasi.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Sepak Bola SMP 4 SIGI" onerror="fallbackImage(this, 'Sepak Bola')" src="galeri6.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-futbol"></i> Olahraga Tim</span><h3 style="margin-top:12px">Sepak Bola</h3><p>Mengembangkan kerja sama tim, teknik bermain, dan sportivitas.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Futsal SMP 4 SIGI" onerror="fallbackImage(this, 'Futsal')" src="galeri5.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-users-viewfinder"></i> Olahraga Tim</span><h3 style="margin-top:12px">Futsal</h3><p>Melatih kecepatan, kekompakan, teknik, dan strategi permainan.</p></div></div><div class="card program-card reveal"><div class="program-image"><img alt="Bulu Tangkis SMP 4 SIGI" onerror="fallbackImage(this, 'Bulu Tangkis')" src="galeri6.jpg"/></div><div class="program-body"><span class="pill"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Olahraga Raket</span><h3 style="margin-top:12px">Bulu Tangkis</h3><p>Mengembangkan refleks, ketangkasan, stamina, dan semangat kompetisi.</p></div></div></div>
-<div class="soft-card reveal" style="margin-top:22px;text-align:center;background:linear-gradient(135deg,#eff6ff,#ecfeff)">
-<p style="font-weight:900;color:#1e40af">“Melalui kegiatan ekstrakurikuler, peserta didik SMP 4 SIGI dapat mengembangkan potensi diri, membangun karakter, dan meraih prestasi sesuai minat dan bakat masing-masing.”</p>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Ekskul</div>
+        <h1>Ekstrakurikuler</h1>
+        <p>Kegiatan pengembangan minat, bakat, karakter, kepemimpinan, dan prestasi siswa SMP 4 SIGI.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-star" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Pengembangan Diri</strong><span>Akademik, seni, olahraga, dan kepemimpinan</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card program-card reveal"><div class="program-image"><img alt="Pramuka SMP 4 SIGI" onerror="fallbackImage(this, 'Pramuka')" src="galeri2.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-campground"></i> Kepanduan</span><h3 style="margin-top:12px">Pramuka</h3><p>Melatih kedisiplinan, kemandirian, kepemimpinan, dan kerja sama.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="PMR SMP 4 SIGI" onerror="fallbackImage(this, 'PMR')" src="galeri1.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-hand-holding-medical"></i> Kemanusiaan</span><h3 style="margin-top:12px">PMR</h3><p>Membentuk kepedulian sosial, keterampilan pertolongan pertama, dan jiwa kemanusiaan.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Silat SMP 4 SIGI" onerror="fallbackImage(this, 'Silat')" src="galeri3.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-hand-fist"></i> Bela Diri</span><h3 style="margin-top:12px">Silat</h3><p>Mengembangkan kemampuan bela diri, ketahanan fisik, dan sportivitas.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Karate SMP 4 SIGI" onerror="fallbackImage(this, 'Karate')" src="galeri4.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-medal"></i> Bela Diri</span><h3 style="margin-top:12px">Karate</h3><p>Melatih fokus, kekuatan, keberanian, dan pengendalian diri.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Taekwondo SMP 4 SIGI" onerror="fallbackImage(this, 'Taekwondo')" src="smpn4sigi.WebP"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-bolt"></i> Bela Diri</span><h3 style="margin-top:12px">Taekwondo</h3><p>Mengasah kemampuan bela diri, kelincahan, dan disiplin.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Panjat Tebing SMP 4 SIGI" onerror="fallbackImage(this, 'Panjat Tebing')" src="galeri5.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-mountain"></i> Ketangkasan</span><h3 style="margin-top:12px">Panjat Tebing</h3><p>Melatih keberanian, strategi, kekuatan, dan konsentrasi.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Sepak Bola SMP 4 SIGI" onerror="fallbackImage(this, 'Sepak Bola')" src="galeri6.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-futbol"></i> Olahraga Tim</span><h3 style="margin-top:12px">Sepak Bola</h3><p>Mengembangkan kerja sama tim, teknik bermain, dan sportivitas.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Futsal SMP 4 SIGI" onerror="fallbackImage(this, 'Futsal')" src="galeri5.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-users-viewfinder"></i> Olahraga Tim</span><h3 style="margin-top:12px">Futsal</h3><p>Melatih kecepatan, kekompakan, teknik, dan strategi permainan.</p></div></div>
+        <div class="card program-card reveal"><div class="program-image"><img alt="Bulu Tangkis SMP 4 SIGI" onerror="fallbackImage(this, 'Bulu Tangkis')" src="galeri6.jpg"></div><div class="program-body"><span class="pill"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Olahraga Raket</span><h3 style="margin-top:12px">Bulu Tangkis</h3><p>Mengembangkan refleks, ketangkasan, stamina, dan semangat kompetisi.</p></div></div>
+      </div>
+
+      <div class="soft-card reveal" style="margin-top:22px;text-align:center;background:linear-gradient(135deg,#eff6ff,#ecfeff)">
+        <p style="font-weight:900;color:#1e40af">“Melalui kegiatan ekstrakurikuler, peserta didik SMP 4 SIGI dapat mengembangkan potensi diri, membangun karakter, dan meraih prestasi sesuai minat dan bakat masing-masing.”</p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- GALERI -->
-<section class="page" data-title="Galeri" id="galeri">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Galeri</div>
-<h1>Galeri Kegiatan</h1>
-<p>Dokumentasi kegiatan, lingkungan, dan momen sekolah SMP 4 SIGI.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-images" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Dokumentasi</strong><span>Foto dan video kegiatan sekolah</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container gallery-grid">
-<div class="gallery-item reveal" data-full="galeri1.jpg">
-<img alt="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025" title="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025" onerror="fallbackImage(this, 'Juara 1 Umum Temu PMR')" src="galeri1.jpg"/>
-<div class="gallery-caption"><h3>Juara 1 Umum Temu PMR 2025</h3><p>PMR SMPN 4 Sigi meraih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025.</p></div>
-</div>
-<div class="gallery-item reveal" data-full="galeri2.jpg"><img alt="Penerimaan Tamu Penggalang SMPN 4 Sigi" onerror="fallbackImage(this, 'Penerimaan Tamu Penggalang')" src="galeri2.jpg"/><div class="gallery-caption"><h3>Penerimaan Tamu Penggalang</h3><p>Kegiatan Penerimaan Tamu Penggalang SMPN 4 Sigi.</p></div></div>
-<div class="gallery-item reveal" data-full="galeri3.jpg"><img alt="Pelantikan OSIS SMPN 4 Sigi Masa Bakti 2025/2026" onerror="fallbackImage(this, 'Pelantikan OSIS')" src="galeri3.jpg"/><div class="gallery-caption"><h3>Pelantikan OSIS</h3><p>Pelantikan OSIS Masa Bakti 2025/2026.</p></div></div>
-<div class="gallery-item reveal" data-full="galeri4.mp4" data-type="video">
-<video class="gallery-video" autoplay muted loop playsinline preload="metadata" poster="galeri4.jpg" aria-label="Video perpisahan kelas 9 dan Ibu Nurlin SMPN 4 Sigi">
-<source src="galeri4.mp4" type="video/mp4">
-Browser kamu tidak mendukung video.
-</video>
-<div class="gallery-caption"><h3>Perpisahan Kelas 9 dan Ibu Nurlin</h3><p>Video dokumentasi perpisahan kelas 9 dan Ibu Nurlin di SMPN 4 Sigi.</p></div>
-</div>
-<div class="gallery-item reveal" data-full="galeri5.jpg"><img alt="Lingkungan SMP 4 SIGI" onerror="fallbackImage(this, 'Lingkungan Sekolah')" src="galeri5.jpg"/><div class="gallery-caption"><h3>Lingkungan Sekolah</h3><p>Suasana sekolah yang nyaman dan mendukung kegiatan belajar.</p></div></div>
-<div class="gallery-item reveal" data-full="galeri6.jpg"><img alt="Dokumentasi SMP 4 SIGI" onerror="fallbackImage(this, 'Dokumentasi Sekolah')" src="galeri6.jpg"/><div class="gallery-caption"><h3>Dokumentasi Sekolah</h3><p>Foto kegiatan dan momen sekolah SMP Negeri 4 Sigi.</p></div></div>
-</div>
-</div>
+
+<section class="page" data-title="Informasi" id="informasi">
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Informasi</div>
+        <h1>Informasi Sekolah</h1>
+        <p>Informasi kegiatan sekolah dari galeri 2 sampai galeri 5 SMP 4 SIGI.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-circle-info" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Informasi</strong><span>Kegiatan dan dokumentasi sekolah</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container gallery-grid">
+      <div class="gallery-item reveal" data-full="galeri2.jpg">
+        <img alt="Penerimaan Tamu Penggalang SMPN 4 Sigi" onerror="fallbackImage(this, 'Penerimaan Tamu Penggalang')" src="galeri2.jpg">
+        <div class="gallery-caption"><h3>Penerimaan Tamu Penggalang</h3><p>Kegiatan Penerimaan Tamu Penggalang SMPN 4 Sigi.</p></div>
+      </div>
+
+      <div class="gallery-item reveal" data-full="galeri3.jpg">
+        <img alt="Pelantikan OSIS SMPN 4 Sigi Masa Bakti 2025 2026" onerror="fallbackImage(this, 'Pelantikan OSIS')" src="galeri3.jpg">
+        <div class="gallery-caption"><h3>Pelantikan OSIS 2025/2026</h3><p>Pelantikan OSIS SMPN 4 Sigi Masa Bakti 2025/2026.</p></div>
+      </div>
+
+      <div class="gallery-item reveal" data-full="galeri4.mp4" data-type="video">
+        <video class="gallery-video" autoplay muted loop playsinline preload="metadata" poster="galeri4.jpg" aria-label="Perpisahan kelas 9 dan Ibu Nurlin SMPN 4 Sigi">
+          <source src="galeri4.mp4" type="video/mp4">
+          Browser kamu tidak mendukung video.
+        </video>
+        <div class="gallery-caption"><h3>Perpisahan Kelas 9</h3><p>Video perpisahan kelas 9 dan Ibu Nurlin di SMPN 4 Sigi.</p></div>
+      </div>
+
+      <div class="gallery-item reveal" data-full="galeri5.jpg">
+        <img alt="Lingkungan SMP 4 SIGI" onerror="fallbackImage(this, 'Lingkungan Sekolah')" src="galeri5.jpg">
+        <div class="gallery-caption"><h3>Lingkungan Sekolah</h3><p>Suasana sekolah yang nyaman dan mendukung kegiatan belajar.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- BERITA -->
+
 <section class="page" data-title="Berita dan Agenda" id="berita">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Berita</div>
-<h1>Berita &amp; Agenda</h1>
-<p>Kabar sekolah, pengumuman, dan agenda kegiatan SMP 4 SIGI.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-newspaper" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Kabar Sekolah</strong><span>Informasi terbaru dan agenda kegiatan</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container news-layout">
-<article class="headline-card reveal">
-<img alt="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025" title="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025" onerror="fallbackImage(this, 'Prestasi PMR SMPN 4 Sigi')" src="galeri1.jpg"/>
-<div class="headline-content">
-<span class="pill" style="background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.20)"><i class="fa-solid fa-trophy"></i> Prestasi</span>
-<h3>PMR SMPN 4 Sigi Raih Juara 1 Umum</h3>
-<p>Temu PMR se-Kabupaten Sigi 2025 dengan 9 lomba juara 1 dan 3 lomba juara 2.</p>
-<a class="btn btn-primary" href="smpn-4-sigi-sapu-bersih-9-juara.html" style="margin-top:16px"><i class="fa-solid fa-newspaper"></i> Baca Berita Lengkap</a>
-</div>
-</article>
-<div class="mini-news">
-<article class="soft-card reveal"><img alt="Pelantikan OSIS" onerror="fallbackImage(this, 'OSIS')" src="galeri3.jpg"/><div><span class="pill">Agenda</span><h3>Pelantikan OSIS 2025/2026</h3><p>Pelantikan OSIS SMPN 4 Sigi Masa Bakti 2025/2026.</p></div></article>
-<article class="soft-card reveal"><img alt="PTP Pramuka" onerror="fallbackImage(this, 'Pramuka')" src="galeri2.jpg"/><div><span class="pill">Kesiswaan</span><h3>PTP Pramuka</h3><p>Kegiatan penerimaan tamu penggalang untuk anggota baru.</p></div></article>
-<article class="soft-card reveal"><img alt="Perpisahan kelas 9 dan Ibu Nurlin SMPN 4 Sigi" onerror="fallbackImage(this, 'Perpisahan Kelas 9')" src="galeri4.jpg"/><div><span class="pill">Video</span><h3>Perpisahan Kelas 9 dan Ibu Nurlin</h3><p>Dokumentasi video perpisahan kelas 9 dan Ibu Nurlin.</p></div></article>
-<article class="soft-card reveal"><img alt="Lingkungan Sekolah" onerror="fallbackImage(this, 'Lingkungan')" src="galeri5.jpg"/><div><span class="pill">Sekolah</span><h3>Lingkungan Belajar</h3><p>Lingkungan sekolah mendukung pembelajaran aktif.</p></div></article>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Berita</div>
+        <h1>Berita Sekolah</h1>
+        <p>Berita prestasi utama SMP 4 SIGI. Galeri 1 berada di menu Berita.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-newspaper" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>Berita</strong><span>Prestasi dan kabar utama sekolah</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container news-layout">
+      <article class="headline-card reveal">
+        <img
+          alt="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025"
+          title="PMR SMPN 4 Sigi Raih Juara 1 Umum Temu PMR se-Kabupaten Sigi 2025"
+          onerror="fallbackImage(this, 'Prestasi PMR SMPN 4 Sigi')"
+          src="galeri1.jpg">
+
+        <div class="headline-content">
+          <span class="pill" style="background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.20)"><i class="fa-solid fa-trophy"></i> Prestasi</span>
+          <h3>PMR SMPN 4 Sigi Raih Juara 1 Umum</h3>
+          <p>Temu PMR se-Kabupaten Sigi 2025 dengan 9 lomba juara 1 dan 3 lomba juara 2.</p>
+          <a class="btn btn-primary" href="smpn-4-sigi-sapu-bersih-9-juara.html" style="margin-top:16px">
+            <i class="fa-solid fa-newspaper"></i>
+            Baca Berita Lengkap
+          </a>
+        </div>
+      </article>
+
+      <div class="mini-news">
+        <article class="soft-card reveal"><img alt="Penerimaan Tamu Penggalang" onerror="fallbackImage(this, 'Pramuka')" src="galeri2.jpg"><div><span class="pill">Informasi</span><h3>Penerimaan Tamu Penggalang</h3><p>Kegiatan Penerimaan Tamu Penggalang SMPN 4 Sigi.</p></div></article>
+        <article class="soft-card reveal"><img alt="Pelantikan OSIS" onerror="fallbackImage(this, 'OSIS')" src="galeri3.jpg"><div><span class="pill">Informasi</span><h3>Pelantikan OSIS 2025/2026</h3><p>Pelantikan OSIS SMPN 4 Sigi Masa Bakti 2025/2026.</p></div></article>
+        <article class="soft-card reveal"><img alt="Perpisahan Kelas 9 dan Ibu Nurlin" onerror="fallbackImage(this, 'Perpisahan Kelas 9')" src="galeri4.jpg"><div><span class="pill">Informasi</span><h3>Perpisahan Kelas 9</h3><p>Video perpisahan kelas 9 dan Ibu Nurlin di SMPN 4 Sigi.</p></div></article>
+        <article class="soft-card reveal"><img alt="Lingkungan Sekolah" onerror="fallbackImage(this, 'Lingkungan')" src="galeri5.jpg"><div><span class="pill">Informasi</span><h3>Lingkungan Belajar</h3><p>Lingkungan sekolah mendukung pembelajaran aktif.</p></div></article>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- KONTAK -->
+
 <section class="page" data-title="Kontak" id="kontak">
-<div class="page-hero">
-<div class="container page-hero-content">
-<div>
-<div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Kontak</div>
-<h1>Kontak</h1>
-<p>Hubungi SMP 4 SIGI melalui email, sosial media, atau datang langsung ke alamat sekolah.</p>
-</div>
-<div class="hero-badge-card"><i class="fa-solid fa-address-book" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>SMP 4 SIGI</strong><span>Jalan Poros Palu-Kulawi KM. 13</span></div>
-</div>
-</div>
-<div class="section">
-<div class="container contact-grid">
-<div class="contact-list reveal">
-<div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><h3>Alamat</h3><p>Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p></div></div>
-<a class="contact-item" href="mailto:smpn4sigi@gmail.com"><i class="fa-solid fa-envelope"></i><div><h3>Email</h3><p>smpn4sigi@gmail.com</p></div></a>
-<a class="contact-item" href="https://www.instagram.com/spen4_sigi/" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i><div><h3>Instagram</h3><p>@spen4_sigi</p></div></a>
-<a class="contact-item" href="https://www.youtube.com/@smpnegeri4sigi798" rel="noopener" target="_blank"><i class="fa-brands fa-youtube"></i><div><h3>YouTube</h3><p>SMP Negeri 4 Sigi</p></div></a>
-</div>
-<div class="card reveal">
-<span class="eyebrow"><i class="fa-solid fa-message"></i> Kirim Pesan</span>
-<h3 style="font-size:2rem;margin:14px 0 16px">Form Kontak</h3>
-<form class="contact-form" id="contactForm">
-<div class="form-row">
-<input id="nama" name="nama" placeholder="Nama lengkap" required="" type="text"/>
-<input id="email" name="email" placeholder="Email aktif" required="" type="email"/>
-</div>
-<input id="subjek" name="subjek" placeholder="Subjek pesan" required="" type="text"/>
-<textarea id="pesan" name="pesan" placeholder="Tulis pesan kamu..." required=""></textarea>
-<button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim via Email</button>
-</form>
-</div>
-</div>
-<div class="container" style="margin-top:24px">
-<div class="card map-card reveal">
-<span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Lokasi</span>
-<h3 style="font-size:1.7rem;margin:14px 0 16px">Peta SMP 4 SIGI</h3>
-<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi&amp;output=embed" title="Peta lokasi SMP 4 SIGI"></iframe>
-</div>
-</div>
-</div>
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <div>
+        <div class="breadcrumb"><i class="fa-solid fa-house"></i> Beranda <i class="fa-solid fa-chevron-right"></i> Kontak</div>
+        <h1>Kontak</h1>
+        <p>Hubungi SMP 4 SIGI melalui email, sosial media, atau datang langsung ke alamat sekolah.</p>
+      </div>
+      <div class="hero-badge-card"><i class="fa-solid fa-address-book" style="font-size:4rem;color:#fbbf24;margin-bottom:12px"></i><strong>SMP 4 SIGI</strong><span>Jalan Poros Palu-Kulawi KM. 13</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container contact-grid">
+      <div class="contact-list reveal">
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><h3>Alamat</h3><p>Jalan Poros Palu-Kulawi KM. 13, Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p></div></div>
+        <a class="contact-item" href="mailto:smpn4sigi@gmail.com"><i class="fa-solid fa-envelope"></i><div><h3>Email</h3><p>smpn4sigi@gmail.com</p></div></a>
+        <a class="contact-item" href="https://www.instagram.com/spen4_sigi/" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i><div><h3>Instagram</h3><p>@spen4_sigi</p></div></a>
+        <a class="contact-item" href="https://www.youtube.com/@smpnegeri4sigi798" rel="noopener" target="_blank"><i class="fa-brands fa-youtube"></i><div><h3>YouTube</h3><p>SMP Negeri 4 Sigi</p></div></a>
+      </div>
+
+      <div class="card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-message"></i> Kirim Pesan</span>
+        <h3 style="font-size:2rem;margin:14px 0 16px">Form Kontak</h3>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input id="nama" name="nama" placeholder="Nama lengkap" required type="text">
+            <input id="email" name="email" placeholder="Email aktif" required type="email">
+          </div>
+          <input id="subjek" name="subjek" placeholder="Subjek pesan" required type="text">
+          <textarea id="pesan" name="pesan" placeholder="Tulis pesan kamu..." required></textarea>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim via Email</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:24px">
+      <div class="card map-card reveal">
+        <span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Lokasi</span>
+        <h3 style="font-size:1.7rem;margin:14px 0 16px">Peta SMP 4 SIGI</h3>
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi&amp;output=embed" title="Peta lokasi SMP 4 SIGI"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
+
 </main>
+
 <button aria-label="Kembali ke atas" class="back-top" id="backTop"><i class="fa-solid fa-arrow-up"></i></button>
+
 <div aria-hidden="true" class="modal" id="imageModal">
-<div class="modal-card">
-<button aria-label="Tutup galeri" class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
-<img alt="Preview galeri" id="modalImage" src=""/>
-<video id="modalVideo" autoplay muted loop playsinline preload="metadata">
-<source id="modalVideoSource" src="" type="video/mp4">
-Browser kamu tidak mendukung video.
-</video>
+  <div class="modal-card">
+    <button aria-label="Tutup galeri" class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="Preview galeri" id="modalImage" src="">
+    <video id="modalVideo" autoplay muted loop playsinline preload="metadata">
+      <source id="modalVideoSource" src="" type="video/mp4">
+      Browser kamu tidak mendukung video.
+    </video>
+  </div>
 </div>
-</div>
+
 <footer>
-<div class="container footer-grid">
-<div>
-<h3>SMP 4 SIGI</h3>
-<p>SMP Negeri 4 Sigi adalah sekolah negeri di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p>
-</div>
-<div>
-<h3>Menu</h3>
-<ul class="footer-links">
-<li><button class="nav-link" data-page="beranda" type="button">Beranda</button></li>
-<li><button class="nav-link" data-page="profil" type="button">Profil</button></li>
-<li><button class="nav-link" data-page="akademik" type="button">Akademik</button></li>
-<li><button class="nav-link" data-page="kontak" type="button">Kontak</button></li>
-</ul>
-</div>
-<div>
-<h3>Informasi</h3>
-<ul class="footer-links">
-<li><button class="nav-link" data-page="mpls" type="button">MPLS</button></li>
-<li><button class="nav-link" data-page="ekskul" type="button">Ekstrakurikuler</button></li>
-<li><button class="nav-link" data-page="galeri" type="button">Galeri</button></li>
-<li><button class="nav-link" data-page="berita" type="button">Berita</button></li>
-</ul>
-</div>
-<div>
-<h3>Sosial Media</h3>
-<ul class="footer-links">
-<li><a href="https://www.instagram.com/spen4_sigi/" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-<li><a href="https://www.youtube.com/@smpnegeri4sigi798" rel="noopener" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
-<li><a href="https://www.google.com/maps/search/?api=1&amp;query=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi" rel="noopener" target="_blank"><i class="fa-solid fa-map"></i> Google Maps</a></li>
-</ul>
-</div>
-</div>
-<div class="container footer-bottom">© <span id="yearNow"></span> SMP 4 SIGI. Website informasi sekolah.</div>
+  <div class="container footer-grid">
+    <div>
+      <h3>SMP 4 SIGI</h3>
+      <p>SMP Negeri 4 Sigi adalah sekolah negeri di Desa Kotapulu, Kecamatan Dolo, Kabupaten Sigi, Sulawesi Tengah.</p>
+    </div>
+
+    <div>
+      <h3>Menu</h3>
+      <ul class="footer-links">
+        <li><button class="nav-link" data-page="beranda" type="button">Beranda</button></li>
+        <li><button class="nav-link" data-page="profil" type="button">Profil</button></li>
+        <li><button class="nav-link" data-page="akademik" type="button">Akademik</button></li>
+        <li><button class="nav-link" data-page="kontak" type="button">Kontak</button></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Informasi</h3>
+      <ul class="footer-links">
+        <li><button class="nav-link" data-page="mpls" type="button">MPLS</button></li>
+        <li><button class="nav-link" data-page="ekskul" type="button">Ekstrakurikuler</button></li>
+        <li><button class="nav-link" data-page="informasi" type="button">Informasi</button></li>
+        <li><button class="nav-link" data-page="berita" type="button">Berita</button></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Sosial Media</h3>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/spen4_sigi/" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.youtube.com/@smpnegeri4sigi798" rel="noopener" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=SMP%204%20SIGI%20Kotapulu%20Dolo%20Sigi" rel="noopener" target="_blank"><i class="fa-solid fa-map"></i> Google Maps</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">© <span id="yearNow"></span> SMP 4 SIGI. Website informasi sekolah.</div>
 </footer>
+
 <script src="script.js"></script>
 </body>
-</html>
+      </html>
