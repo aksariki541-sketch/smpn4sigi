@@ -38,7 +38,6 @@ function showPage(pageId, updateHistory = true) {
 
     setTimeout(function () {
         setupRevealAnimation();
-        setupPressAnimation();
     }, 120);
 }
 
@@ -81,38 +80,69 @@ function setupContactForm() {
     });
 }
 
-/* EFEK ITEM DIPENCET MAJU KE DEPAN: DESKTOP + MOBILE */
+/* FIX FINAL: EFEK DIPENCET JALAN DI DESKTOP + MOBILE */
 function setupPressAnimation() {
-    const pressItems = document.querySelectorAll(
-        '.btn, .card, .stat-card, .gallery-item, .info-card'
-    );
+    if (window.__pressAnimationReady) return;
+    window.__pressAnimationReady = true;
 
-    pressItems.forEach(function (item) {
-        if (item.dataset.pressReady === 'true') return;
-        item.dataset.pressReady = 'true';
+    const selector = '.btn, .card, .stat-card, .gallery-item, .info-card';
 
-        function addPress() {
-            item.classList.add('press-pop');
-        }
+    function getPressItem(target) {
+        if (!target) return null;
+        return target.closest(selector);
+    }
 
-        function removePress() {
-            setTimeout(function () {
-                item.classList.remove('press-pop');
-            }, 180);
-        }
+    function addPress(item) {
+        if (!item) return;
+        item.classList.add('press-pop');
+    }
 
-        item.addEventListener('pointerdown', addPress);
-        item.addEventListener('pointerup', removePress);
-        item.addEventListener('pointerleave', removePress);
-        item.addEventListener('pointercancel', removePress);
+    function removePress(item) {
+        if (!item) return;
 
-        item.addEventListener('mousedown', addPress);
-        item.addEventListener('mouseup', removePress);
-        item.addEventListener('mouseleave', removePress);
+        setTimeout(function () {
+            item.classList.remove('press-pop');
+        }, 280);
+    }
 
-        item.addEventListener('touchstart', addPress, { passive: true });
-        item.addEventListener('touchend', removePress);
-        item.addEventListener('touchcancel', removePress);
+    document.addEventListener('pointerdown', function (e) {
+        const item = getPressItem(e.target);
+        addPress(item);
+    }, { passive: true });
+
+    document.addEventListener('pointerup', function (e) {
+        const item = getPressItem(e.target);
+        removePress(item);
+    });
+
+    document.addEventListener('pointercancel', function (e) {
+        const item = getPressItem(e.target);
+        removePress(item);
+    });
+
+    document.addEventListener('touchstart', function (e) {
+        const item = getPressItem(e.target);
+        addPress(item);
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+        const item = getPressItem(e.target);
+        removePress(item);
+    });
+
+    document.addEventListener('touchcancel', function (e) {
+        const item = getPressItem(e.target);
+        removePress(item);
+    });
+
+    document.addEventListener('mousedown', function (e) {
+        const item = getPressItem(e.target);
+        addPress(item);
+    });
+
+    document.addEventListener('mouseup', function (e) {
+        const item = getPressItem(e.target);
+        removePress(item);
     });
 }
 
