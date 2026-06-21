@@ -76,7 +76,7 @@ function setupContactForm() {
     });
 }
 
-/* FIX: EFEK TAP/KLIK JALAN DI HP DAN DESKTOP */
+/* FIX: EFEK TAP/KLIK JALAN DI HP DAN DESKTOP, TIDAK LANGSUNG BALIK */
 function setupTapEffect() {
     const selector = '.btn, .card, .stat-card, .gallery-item, .info-card';
 
@@ -95,7 +95,7 @@ function setupTapEffect() {
 
             setTimeout(function () {
                 item.classList.remove('tap-pop');
-            }, 650);
+            }, 1600);
         });
     }
 
